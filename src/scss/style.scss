@@ -1,0 +1,397 @@
+// =========================================================== 
+// Import
+// ===========================================================   
+//@import "@option__";
+//@import "font";
+@import "grid";
+@import "mixins";
+//@import "modules/slick";
+
+@import "modules/fancybox";
+// =========================================================== 
+// END Import
+// ===========================================================   
+
+ 
+
+// =========================================================== 
+// Pixel Perfect
+// =========================================================== 
+
+    .front__end {
+        z-index: -1001 !important;
+        opacity: .5 !important;
+    }
+
+    .zindex {
+        z-index: -1000 !important;
+    }
+
+// =========================================================== 
+// END Pixel Perfect
+// =========================================================== 
+
+
+
+
+// =========================================================== 
+// Button BLUE
+// =========================================================== 
+
+
+
+.blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 45px 0 0;
+  background-color: #2A33FF;
+  
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  min-height: 50px;
+
+  cursor: pointer;
+  border-radius: 0px;
+  border: 0;
+
+//  font: 20px MyriadPro-Light;
+  color: #fff;
+  
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  
+  &:hover {
+    color: #fff;
+    background-color: #2A33FF;
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus, &:active {
+    background-color: #2A33FF;
+  }
+}
+
+// =========================================================== 
+// END Button BLUE
+// =========================================================== 
+
+
+
+/* title style */
+
+h1 {
+//    font: 48px $b;
+    //        text-transform: uppercase;
+    color: #000000;
+        line-height: 1.1em;
+    text-transform: uppercase;
+}
+h2 {
+
+//    font: 40px $b;
+    color: #000000;
+    line-height: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 30px;
+  
+//    strong{
+//        font-family: $b;
+//        display: inline-block;
+//    }
+  
+}
+h3 {
+//    font: 28px $pb;
+    font-weight: 900;
+        line-height: 1.1em;
+//     text-transform: uppercase;
+    color: #303030;
+    
+}
+h4 {
+//    font: 25px $pb;
+    font-weight: 900;
+
+//     text-transform: uppercase;
+    color: #010101;
+}
+p {
+//    font: 18px $l;
+    color: #010101;
+    margin-bottom: 15px;
+     
+    
+}
+
+/* title end style */
+
+// =========================================================== 
+// END Title style
+// =========================================================== 
+
+
+// =========================================================== 
+// SLICK STYLE
+// =========================================================== 
+
+.slider{
+    display: none;
+}
+div.slick-slider.slick-initialized {
+    display: block;
+}
+
+// =========================================================== 
+// END SLICK STYLE
+// =========================================================== 
+
+
+// =========================================================== 
+// HEADER style
+// =========================================================== 
+
+    header {
+        background: rgb(101, 101, 101);
+        background-size: cover;
+    }
+
+// =========================================================== 
+// END HEADER style 
+// =========================================================== 
+
+
+
+// =========================================================== 
+// SECTION style
+// =========================================================== 
+
+  .section__1{
+        background-color: #f1f1f1;
+
+  }
+
+// =========================================================== 
+// END SECTION style
+// =========================================================== 
+
+
+
+// =========================================================== 
+// FOOTER style
+// =========================================================== 
+
+    footer {
+      background-color: #050b10;
+    }
+
+// =========================================================== 
+// END FOOTER style
+// =========================================================== 
+
+
+
+
+
+
+// =========================================================== 
+// @media element 1201 style  <--
+// =========================================================== 
+
+
+    @media only screen and (min-width: 1201px) { 
+
+        header{
+          
+        }
+
+        header,
+        footer,
+        [class*='section__']{
+            padding: 100px 0;
+        }
+
+    }
+
+
+// =========================================================== 
+// END @media element 1201 style  <--
+// =========================================================== 
+
+
+
+// =========================================================== 
+// @media element 1200 style -->
+// =========================================================== 
+
+    @media only screen and (max-width: 1200px) and (min-width: 993px) {
+
+        header,
+        footer,
+        [class*='section__']{
+            padding: 100px 0;
+        }
+
+        /* display__center__element  ----------------> */
+        .display__center__element{
+            text-align: center;
+        }
+        /* display__none__element  ----------------> */
+        .display__none__element{
+            display: none;
+        }
+        /* display__flex__element  ----------------> */
+        .display__flex__element{
+            display: flex;
+        }
+        /* display__block__element  ----------------> */
+        .display__block__element{
+            display: block;
+        }
+        /* margin__bottom__element  ----------------> */
+        .margin__bottom__element{
+            margin-bottom: 50px;
+        }
+        /* margin__center__element  ----------------> */
+        .margin__center__element{
+            margin: 45px auto 50px;
+        }
+    }
+
+// =========================================================== 
+// END @media element 1200 style  -->
+// =========================================================== 
+
+
+
+
+// =========================================================== 
+// @media element 992 style  -->
+// =========================================================== 
+
+@media only screen and (max-width: 992px) and (min-width: 601px) {
+
+    header,
+    footer,
+    [class*='section__']{
+        padding: 50px 0;
+    }
+    
+    
+    h1 {
+//        font: 40px $pb !important;
+    }
+    
+    h2 {
+//        font: 30px $pb !important;
+    }
+    
+    h3 {
+//        font: 25px $b;
+    }
+    
+    h4 {
+//        font: 23px $b;
+    }
+    
+    /* display__center__element  ----------------> */
+    .display__center__element{
+        text-align: center;
+    }
+    /* display__none__element  ----------------> */
+    .display__none__element{
+        display: flex;
+    }
+    /* display__flex__element  ----------------> */
+    .display__flex__element{
+        display: flex;
+    }
+    /* display__block__element  ----------------> */
+    .display__block__element{
+        display: block;
+    }
+    /* margin__center__element  ----------------> */
+    .margin__center__element{
+        margin: 45px auto 50px;
+    }
+    /* margin__bottom__element  ----------------> */
+    .margin__bottom__element{
+        margin-bottom: 50px;
+    }
+    /* padding__bottom__element  ----------------> */
+    .padding__bottom__element{
+        padding-bottom: 50px;
+    }
+}
+
+// =========================================================== 
+// END @media element 992 style  -->
+// =========================================================== 
+
+
+
+// =========================================================== 
+// @media element 600 style  -->
+// =========================================================== 
+
+    @media only screen and (max-width: 600px) {
+
+
+
+        header,
+        footer,
+        [class*='section__'] {
+            padding: 30px 0;
+        }
+        h1 {
+           
+        }
+        h2 {
+          
+        }
+        h3 {
+          
+        }
+        h4 {
+          
+        }
+        p {
+           
+        }
+        /* display__center__element  ----------------> */
+        .display__center__element{
+            text-align: center;
+        }
+        /* display__none__element  ----------------> */
+        .display__none__element{
+            display: flex;
+        }
+        /* display__flex__element  ----------------> */
+        .display__flex__element{
+            display: flex;
+        }
+        /* display__block__element  ----------------> */
+        .display__block__element{
+            display: block;
+        }
+        /* margin__center__element  ----------------> */
+        .margin__center__element{
+            margin: 25px auto 30px;
+        }
+        /* margin__bottom__element  ----------------> */
+        .margin__bottom__element,
+        .last{
+            margin-bottom: 30px;
+        }
+        /* padding__bottom__element  ----------------> */
+        .padding__bottom__element {
+            padding-bottom: 30px;
+        }
+    }
+
+// =========================================================== 
+// END @media element 600 style  -->
+// =========================================================== 
