@@ -809,12 +809,12 @@ input[type=range] {
 
 .container {
     margin: 0 auto;
-      max-width: 1175px;
+      max-width: 1640px;
 }
 
 @media only screen and (min-width: 601px) {
     .container {
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -826,7 +826,13 @@ input[type=range] {
 
 @media only screen and (min-width: 1100px) {
     .container {
-        width: 100%;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        width: 90%;
     }
 }
 

@@ -17,79 +17,155 @@ html
     //END bar-long
     
     header
-      .menu
-        .container
-          .row
-            .col.m12.s12.l3.xl3
-           
-            .col.m12.s12.l4.xl3.mobail
-              a.anim-button
-                span
-                span
-                span
+      .container
+        .row
+          .col.m3.s3.l3.xl3
+            .box__logo
+              img.logo(src='#', alt='Logo')
 
-            .col.m12.s12.l9.xl9
-              ul.menu__ul
-                li
-                  a.scroll(href="#" target="_blank") Lorem ipsum dolor.
-                li
-                  a.scroll(href="#") Lorem ipsum dolor.
-                li
-                  a.scroll(href="#") Lorem ipsum dolor.
-                li
-                  a.scroll(href="#") Lorem ipsum dolor.
-                li
-                  a.scroll(href="#") Lorem ipsum dolor.
+
+          .col.m9.s9.l9.xl9
+            a.link
+              span
+              span
+              span
+            ul.menu
+              li
+                a.scroll(href="#about" target="_blank") about
+              li
+                a.scroll(href="#services") services
+              li
+                a.scroll(href="#contact") contact
                   
+
+    section.section__top
       .container
         .row
-          .col.m12.s12.l12.xl6
-            H1 Lfgfgfg
-            h2 disjdkjk
-              span dsds 
-            p.sabtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae fugiat a eaque ipsum, harum maxime amet aut perferendis rerum recusandae.
-            p.sabtitle Lorem ipsu.
+          .col.m12.s12.l12.xl12
+            h1 Sting Creative Marketing
             
-          .col.m12.s12.l12.xl6
-            .block__form
-              form(method='POST', action='javascript:void(null);')
-                // Hidden Required Fields
-                input(type='hidden', name='project_name', value='demo project_name')
-                input(type='hidden', name='admin_email', value='demo@gmail.com')
-                input(type='hidden', name='form_subject', value='demo form_subject')
-                .form_input
-                  span.field
-                    input.ferstname(type='text', name='ferstname', required='', value='', placeholder='Name')
-                .form_input
-                  span.field.phone1
-                    input.phone(type='tel', name='phone', required='', value='', placeholder='Phone')
-                .form_input
-                  span.field
-                    input.mail(type='email', name='email', required='', value='', placeholder='Email')
-                button.blue(type='submit', name='send') SEND
-                
-
-    section.section__1
-      .container
+    section.section__1#about
+       .container
         .row
-          .col.m12.s12.l12.xl6
-            h2 Lorem ipsum dolor sit amet.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae fugiat a eaque ipsum, harum maxime amet aut perferendis rerum recusandae.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae fugiat a eaque ipsum, harum maxime amet aut perferendis rerum recusandae.
-            p.last Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae fugiat a eaque ipsum, harum maxime amet aut perferendis rerum recusandae.
+          .col.m12.s12.l12.xl7
+            h2 What It’s all about?
+          .col.m12.s12.l12.xl5
+            p Your presence cannot be validated without the right collaboration with the industry specialists. Still looking for your marketing solutions? Let us guide your brand, achieving the recognition you deserve! Our team consists of reputable industry professionals, up-to-date with market trends and trained to effectively provide you with the appropriate services for all your marketing needs!
 
+    section.section__2#services
+       .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2 Boost Your Strategy With Our Services
+
+        .row
+          .col.m12.s12.l12.xl12
+            .block__slider
+              div
+               .block
+                  span 01
+                  p Integrated Marketing Strategy
+              div
+               .block
+                  span 02
+                  p Content & Copy Strategy
+              div
+               .block
+                  span 03
+                  p Graphic & Web Design
+              div
+               .block
+                  span 04
+                  p Web Development
+              div
+               .block
+                  span 05
+                  p Email Marketing Services
               
+    section.section__3
+       .container
+        .row
+          picture
+            source(srcset='img/bulbs.png', media='(min-width: 601px)')
+            source(srcset='img/bulbs-mob.png', media='(max-width: 600px)')
+            img.bulbs(srcset='img/bulbs.png', alt='bulbs')
+          .col.m12.s12.l12.xl12
+            h2 Partner with Sting Creative Marketing
+
+        .row
+          .col.m12.s12.l8.xl7
+            ul.list
+              li
+                img(src='img/strategy.png', alt='img1')
+                h5 Strategy
+                p Our team of experts are coming up with the best strategies! Expect instant solutions and targeted campaigns to boost your clicks, conversions & subscriptions.
+              li
+                img(src='img/pencil.png', alt='img2')
+                h5 Content
+                p Your company’s message is important, and communicating it correctly is even more important! We provide you with enriched content that will send the appropriate messages to your audience.
+              li
+                img(src='img/design.png', alt='img3')
+                h5 Design
+                p We provide you with top-notch designs,  to attract your target audience. Let us elevate your visual identity with innovative tactics and designs according to the needs of your demographic.
+              li
+                img(src='img/web.png', alt='img4')
+                h5 Web
+                p Upgrade your website with the innovative services of our development team. We aim for responsive and performant user-experience, allowing you to meet your users’ needs.
+              li
+                img(src='img/email.png', alt='img5')
+                h5 Emails
+                p Get an effective email marketing strategy, configured appropriately to attract the attention of every customer. Speak their language and build funnels to ensure greater engagement.
+              li
+                img(src='img/social.png', alt='img6')
+                h5 Social Media
+                p The expectations and evolution of new things require quick and smart strategies with the necessary emphasis on social media. Let yourself be bold among the competition.
+
+    section.section__4#contact
+       .container
+        .row
+          .col.m12.s12.l8.xl7
+            .block
+              h3  Contact US
+              p Partner with top professionals, to elevate your marketing to the highest level!! If you need any assistance, feel free to get in touch with us!
+              .block__form
+                form(method='POST', action='javascript:void(null);')
+                  // Hidden Required Fields
+                  .form_input
+                    span.field
+                      input.ferstname(type='text', name='ferstname', required='', value='', placeholder='Name')
+                  .form_input
+                    span.field
+                      input.mail(type='email', name='email', required='', value='', placeholder='Email')
+                  .form_input
+                    span.field
+                      input.ferstname(type='text', name='subject', required='', value='', placeholder='Subject')
+                  .form_input
+                    span.field
+                      textarea.textarea(name='message', required='', value='', placeholder='Message')
+
+                  button.blue(type='submit', name='send') SEND
   
     footer
       .container
         .row
-          .col.m6.s12.l6.xl3
+          .col.m12.s12.l12.xl12
             .block
+              p Sting Creative Marketing Ltd is an official brand of
+              ul
+                li
+                  a(href="#") Terms & Conditions
+                li
+                  a(href="#") Cookies Policy
+                li
+                  a(href="#") Privacy Policy
+              p &reg; 2020 StingCreativeMarketingLtd All Rights Reserved
+
+
 
 
 
 //script(src='//code.jquery.com/jquery-3.2.1.min.js')
-//
+
 //script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.js')
 //script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/jquery.inputmask.js')
 //
@@ -100,4 +176,3 @@ html
 
 
 
-    

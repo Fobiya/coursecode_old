@@ -17,7 +17,7 @@ $(function () {
          $(ref).each(function() {
             if ($(this).val() == '') {
                 var errorfield = $(this);
-                $(this).addClass('error').parent('.field').append('<span class="allert">Fill this field</span>');
+                $(this).addClass('error').parent('.field') /*.append('<span class="allert">Fill this field</span>') */;
                 error = 1;
                 $(":input.error:first").focus();
                 return;
@@ -26,7 +26,7 @@ $(function () {
                 if ($(this).attr("type") == 'email') {
                     if(!pattern.test($(this).val())) {
 //                        $("[name=email]").val('');
-                        $(this).addClass('error').parent('.field').append('<span class="allert">Enter a valid e-mail</span>');
+                        $(this).addClass('error').parent('.field') /*.append('<span class="allert">Enter a valid e-mail</span>') */;
                         error = 1;
                         $(":input.error:first").focus();
                     }
@@ -35,7 +35,7 @@ $(function () {
                 if ( $(this).attr("type") == 'tel') {
                     if(!patterntel.test($(this).val())) {
 //                        $("[name=phone]").val('');
-                        $(this).addClass('error').parent('.field').append('<span class="allert">Enter a valid phone number</span>');
+                        $(this).addClass('error').parent('.field') /*.append('<span class="allert">Enter a valid phone number</span>') */;
                         error = 1;
                         $(":input.error:first").focus();
                     }
@@ -45,7 +45,7 @@ $(function () {
                 if ($(this).attr("type") == 'text') {
                     if(!patterntext.test($(this).val())) {
                         var errorfield = $(this);
-                        $(this).addClass('error').parent('.field').append('<span class="allert">input letters only</span>');
+                        $(this).addClass('error').parent('.field') /*.append('<span class="allert">input letters only</span>') */;
                         error = 1;
                         $(":input.error:first").focus();
                     }

@@ -97,6 +97,55 @@ $('.anim-button').click(function(){
 // ===========================================================    
 
 
+
+    $('.block__slider').slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        speed: 1000,
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    });
+
+
 // =========================================================== 
 // END SLICK SLIDER FULL NAVIGATION 
 // ===========================================================       

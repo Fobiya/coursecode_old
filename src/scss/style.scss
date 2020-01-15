@@ -2,10 +2,10 @@
 // Import
 // ===========================================================   
 //@import "@option__";
-//@import "font";
+@import "font";
 @import "grid";
 @import "mixins";
-//@import "modules/slick";
+@import "modules/slick";
 
 @import "modules/fancybox";
 // =========================================================== 
@@ -46,17 +46,18 @@
   align-items: center;
   
   margin: 45px 0 0;
-  background-color: #2A33FF;
+  background-color: #9CC6DA;
   
   width: 100%;
   max-width: 300px;
   height: auto;
-  min-height: 50px;
+  min-height: 65px;
 
   cursor: pointer;
   border-radius: 0px;
   border: 0;
 
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.18);
 //  font: 20px MyriadPro-Light;
   color: #fff;
   
@@ -65,12 +66,12 @@
   
   &:hover {
     color: #fff;
-    background-color: #2A33FF;
+     background-color: #6e9cb2;
     box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.25);
   }
 
   &:focus, &:active {
-    background-color: #2A33FF;
+      background-color: #6e9cb2;
   }
 }
 
@@ -82,49 +83,40 @@
 
 /* title style */
 
-h1 {
-//    font: 48px $b;
-    //        text-transform: uppercase;
-    color: #000000;
-        line-height: 1.1em;
-    text-transform: uppercase;
-}
-h2 {
-
-//    font: 40px $b;
-    color: #000000;
-    line-height: 1.15em;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-bottom: 30px;
-  
-//    strong{
-//        font-family: $b;
-//        display: inline-block;
-//    }
-  
-}
-h3 {
-//    font: 28px $pb;
-    font-weight: 900;
-        line-height: 1.1em;
-//     text-transform: uppercase;
-    color: #303030;
+  @for $i from 1 through 6{
+    h1{
+      line-height: 1em;
+      font-size: 118px;
     
-}
-h4 {
-//    font: 25px $pb;
-    font-weight: 900;
 
-//     text-transform: uppercase;
-    color: #010101;
-}
+    }
+    h#{$i}{
+
+        font:70px - ($i * 7) $b;
+        color: #000;
+
+        text-transform: capitalize;
+        letter-spacing: .1em;
+        margin-bottom: 43px - ($i * 3);
+
+      span{
+         font:80px - ($i * 10) $b;
+      }
+    }
+  }
+
 p {
-//    font: 18px $l;
-    color: #010101;
-    margin-bottom: 15px;
-     
-    
+  font: 18px $l;
+  color: #010101;
+  margin-bottom: 15px;
+
+  span{
+    font: 18px $l;
+  }
+}
+
+a{
+  font: 18px $l;
 }
 
 /* title end style */
@@ -138,7 +130,7 @@ p {
 // SLICK STYLE
 // =========================================================== 
 
-.slider{
+.block__slider{
     display: none;
 }
 div.slick-slider.slick-initialized {
@@ -154,9 +146,63 @@ div.slick-slider.slick-initialized {
 // HEADER style
 // =========================================================== 
 
-    header {
-        background: rgb(101, 101, 101);
-        background-size: cover;
+    header{
+
+      $header-height: 80px;
+
+      width: 100%;
+      height: $header-height;
+
+      position: absolute;
+      top:0;
+      z-index: 1;
+
+      &.scroll{
+        background: rgba(241, 241, 241, 0.9);
+        box-shadow: 0 0 15px rgba(241, 241, 241, 0.9);
+      }
+
+      .box__logo{
+        height: $header-height;
+        display: flex;
+        align-items: center;
+
+        .logo{
+            border: 1px solid #000;
+            width: 60px;
+            height: 60px;
+          display: block
+        }
+
+      }
+
+      .menu{
+        @media (max-width:700px){
+          display: none;
+        }
+        height: $header-height;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        li{
+          margin: 0 15px;
+
+          a{
+            color: #000000;
+            font-weight: 600;
+            letter-spacing: .07em;
+
+            &:hover{
+               color: #3d6c82;
+              text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+
+            }
+          }
+        }
+
+      }
+
     }
 
 // =========================================================== 
@@ -169,10 +215,213 @@ div.slick-slider.slick-initialized {
 // SECTION style
 // =========================================================== 
 
-  .section__1{
-        background-color: #f1f1f1;
 
-  }
+
+
+
+    .section__top{
+
+      @media(min-width:992px){
+        background: #f1f1f1 url(../img/top-background.png) no-repeat top center;
+        background-size: cover;
+        padding: 0;
+
+        & .row>div{
+          text-align: center;
+        }
+        h1{
+          text-align: center;
+        }
+      }
+
+      @media(max-width:991px){
+          background: #f1f1f1 url(../img/bg-img-mob.png) no-repeat top center;
+        background-size: cover;
+      }
+
+      min-height: 100vh;
+      height: 100vh;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+
+
+      h1{
+
+        display: inline-block;
+        position: relative;
+
+        &:after{
+          content: "Elevate your presence";
+          display: block;
+          font-size: 20px;
+          color: #000;
+          position: absolute;
+          right: 18px;
+          bottom: -40px;
+          line-height: 1;
+          letter-spacing: .1em;
+          }
+        }
+      }
+
+    @media(min-width:992px){
+      .section__1{
+        padding-top:150px;
+        padding-bottom: 0;
+        .container>.row:nth-child(1) p{
+          line-height: 2.2em
+        }
+        .container>.row:nth-child(1){
+          margin-bottom: 100px;
+        }
+      }
+    }
+
+
+    @media(min-width:992px){
+      .section__2{
+
+        .block__slider{
+          margin-left: -40px;
+        }
+      }
+    }
+
+    .section__2{
+      background-color: #fff;
+
+      h2{
+        margin-bottom: 80px;
+      }
+
+      .block{
+        max-width: 245px;
+        width: 100%;
+        height: 344px;
+        border: 2px solid #C3C9CC;
+        padding: 80px 40px 0;
+        margin: 50px auto;
+
+        transition: all .7s ease;
+
+        span{
+          color: #d4d4d4;
+          font: 60px $l;
+          margin-bottom: 40px;
+            transition: all .7s ease;
+        }
+
+        p{
+          font-size: 25px;
+          font-weight: 900;
+          line-height: 1.5em;
+        }
+        &:hover{
+          position: relative;
+          border: 4px solid #9cc6da;
+          transform: scale(1.2);
+
+          span{
+            color: #888888
+          }
+        }
+      }
+    }
+
+    @media(min-width:992px){
+      .section__3{
+
+          .bulbs{
+            position: absolute;
+            right: 0;
+            top:20%;
+          }
+      }
+    }
+    .section__3{
+      h2{
+        max-width: 650px;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      .list{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          max-width: 33%;
+          padding-right: 40px;
+          margin-bottom: 85px;
+
+          h5{
+            font-size: 23px;
+          }
+
+          p{
+            font-size: 17px;
+          }
+
+          img{
+            margin-bottom: 30px;
+            max-height: 80px;
+            width: auto;
+
+          }
+        }
+      }
+
+    }
+
+
+    @media(min-width:992px){
+      .section__4{
+        padding-top: 0;
+        .block{
+          padding:  100px 50px 100px 0 ;
+        }
+      }
+    }
+
+    .section__4{
+      .block{
+        position: relative;
+        background: #f6f6f6;
+        .block__form{
+          margin-top: 50px
+        }
+        .block__form,h3,p{
+          position: relative;
+            z-index: 1;
+        }
+        form {
+          .blue{
+            margin-top: 30px;
+          }
+
+        }
+
+        &:before{
+          content: "";
+          display: block;
+          width: 70vw;
+          height: 100%;
+          background: #f6f6f6;
+          right: 0;
+          float: right;
+          top: 0;
+          position: absolute;
+          z-index: 0;
+        }
+
+      }
+
+    }
+
 
 // =========================================================== 
 // END SECTION style
@@ -185,7 +434,52 @@ div.slick-slider.slick-initialized {
 // =========================================================== 
 
     footer {
-      background-color: #050b10;
+      padding: 50px 0;
+      border-top: 1px solid #050b10;
+
+        p{
+          font: 17px $l;
+          color: #000;
+          text-align: center;
+          font-weight: 900;
+          letter-spacing: .03em;
+          margin-bottom: 0;
+        }
+      ul{
+        display: flex;
+        justify-content: center;
+        margin: 13px 0;
+        li:first-child:before{
+          display: none;
+        }
+        li{
+            margin: 0 15px;
+          position: relative;
+
+            &:before{
+              content: "";
+              display: block;
+              width: 1px;
+              height: 15px;
+              margin: 3px 0;
+              position: absolute;
+              left: -13px;
+              top: 0;
+              background: #000;
+            }
+
+          a{
+            font: 17px $l;
+            font-weight: 900;
+             color: #000;
+            text-decoration: underline;
+            &:hover{
+               color: #3d6c82;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+      }
     }
 
 // =========================================================== 
@@ -204,11 +498,7 @@ div.slick-slider.slick-initialized {
 
     @media only screen and (min-width: 1201px) { 
 
-        header{
-          
-        }
-
-        header,
+        /* header,  */
         footer,
         [class*='section__']{
             padding: 100px 0;
@@ -229,8 +519,7 @@ div.slick-slider.slick-initialized {
 
     @media only screen and (max-width: 1200px) and (min-width: 993px) {
 
-        header,
-        footer,
+
         [class*='section__']{
             padding: 100px 0;
         }
@@ -274,7 +563,7 @@ div.slick-slider.slick-initialized {
 
 @media only screen and (max-width: 992px) and (min-width: 601px) {
 
-    header,
+    /* header, */
     footer,
     [class*='section__']{
         padding: 50px 0;
@@ -341,7 +630,7 @@ div.slick-slider.slick-initialized {
 
 
 
-        header,
+        /* header, */
         footer,
         [class*='section__'] {
             padding: 30px 0;
