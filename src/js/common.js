@@ -2,9 +2,30 @@ define(["jquery"], function($) {
     
 //    console.log('Fobiya'); 
 
+
+// ===========================================================
+// NAVIGATION MENU LEFT
+// ===========================================================
+
+    $(function() {
+        $('a.link').click(function() {
+          setTimeout(function(){
+            $('body').addClass('menu_');
+          }, 400);
+
+        });
+    });
+
+    $(document).mouseup(function(e) { // web document click event
+       $('body').removeClass('menu_');
+    });
+
+// ===========================================================
+// END NAVIGATION MENU LEFT
+// ===========================================================
+
   
-    
-    
+
 // ===========================================================  
 // Pixel Perfect MODUL
 // ===========================================================  
@@ -107,16 +128,16 @@ $('.anim-button').click(function(){
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1300,
+                breakpoint: 1500,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
                 }
             },
-            {
-                breakpoint: 1000,
+                     {
+                breakpoint: 1300,
                 settings: {
                     arrows: true,
                     slidesToShow: 3,
@@ -125,7 +146,7 @@ $('.anim-button').click(function(){
                 }
             },
             {
-                breakpoint: 700,
+                breakpoint: 1000,
                 settings: {
                     arrows: true,
                     slidesToShow: 2,
@@ -134,7 +155,7 @@ $('.anim-button').click(function(){
                 }
             },
             {
-                breakpoint: 500,
+                breakpoint: 430,
                 settings: {
                     arrows: true,
                     slidesToShow: 1,

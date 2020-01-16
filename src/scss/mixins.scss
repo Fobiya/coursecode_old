@@ -46,7 +46,7 @@
     position: relative;
     padding: 10px;
      width: 61px;
-    margin: 17px 0 17px auto;
+    margin: 15px 0 15px auto;
     span{
       display: flex;
        justify-content: flex-end;
@@ -68,7 +68,7 @@
 
     &:hover{
       span{
-         background: #3d6c82;
+       background: #000;
          margin-left: auto;
          width: 41px;
       }
@@ -163,6 +163,9 @@ ul,ol{
 
 img,*:before,*:after{
   pointer-events: none;
+}
+img{
+  max-width: 100%;
 }
 
 span{
@@ -339,9 +342,9 @@ section{
       color: #000 !important;
 
       &::placeholder {
-        color: #00305b !important;
+        color: #c0c0c0;
         transition: opacity 0.3s ease;
-//        font: 20px $m !important;
+        font-family: $i;
       }
 
       &:focus {
@@ -381,10 +384,11 @@ section{
 
       //       font: 14px $S !important;
       &::placeholder {
-        color: #303030 !important;
+        color: #c0c0c0;
         opacity: 1;
         transition: opacity 0.3s ease;
         vertical-align: bottom;
+        font-family: $i;
       }
       &:focus {
         &::placeholder {

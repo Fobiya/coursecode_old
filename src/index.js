@@ -1,6 +1,7 @@
 // NEED import
 import $ from 'jquery';
 import 'slick-carousel';
+//import './js/slick.min.js';
 
 import './js/';
 // NEED import

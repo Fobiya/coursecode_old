@@ -14,8 +14,9 @@ https://devhints.io/
 #### Plugins
 * Slick-carousel  [Open link](https://github.com/kenwheeler/slick/)   
 * Fancybox [Open link](https://github.com/fancyapps/fancybox)  
+* Ionic Framework [Open link](https://ionicons.com/v2/)  
 * Pixel perfect my js
-* Forms validator input my ui js 
+* Forms validator input my js 
 
 #### Add
 * Css reset 
@@ -23,4 +24,4 @@ https://devhints.io/
 
 port: 8132
 
-git commit -m '14.01.2020 18:--'
+git commit -m '16.01.2020 19:--'

@@ -1,7 +1,9 @@
 $b: HelveticaNeueLTStd-BdCn
 $l: HelveticaNeueLTStd-Lt
+$i: HelveticaNeueLTStd-It
+$icon: ionicons
 
-$font-list: $b $l
+$font-list: $b $l $i
 
 =font-includ
   @each $font-name in $font-list
@@ -10,3 +12,19 @@ $font-list: $b $l
       src: url("../fonts/#{$font-name}/#{$font-name}.woff2") format("woff2"), url("../fonts/#{$font-name}/#{$font-name}.woff") format("woff"), url("../fonts/#{$font-name}/#{$font-name}.ttf") format("truetype"), url("../fonts/#{$font-name}/#{$font-name}.eot") format("eot"),
 
 +font-includ
+
+
+
+$icon-list: $icon
+
+=font-icon-includ
+  @each $icon-name in $icon-list
+    @font-face
+
+      font-family: $icon;
+      font-style: normal;
+      font-weight: 400;
+      src: url(../fonts/#{$icon-name}/#{$icon-name}.eot?#iefix) format("embedded-opentype"), url(../fonts/#{$icon-name}/#{$icon-name}.woff) format("woff"), url(../fonts/#{$icon-name}/#{$icon-name}.ttf) format("truetype")
+
+
++font-icon-includ
