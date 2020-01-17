@@ -173,7 +173,7 @@ module.exports = {
       { from: `${PATHS.src}/static`, to: '' },
       { from: `${PATHS.src}/img`, to: 'img' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
-      { from: `${PATHS.src}/css`, to: 'css' }
+//      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        
     ])
   ],
