@@ -318,7 +318,7 @@ body{
         align-items: center;
 
         .logo{
-            border: 1px solid #000;
+//            border: 1px solid #000;
             width: 60px;
             height: 60px;
           display: block
@@ -695,7 +695,6 @@ body{
           text-align: center;
           font-weight: 900;
           letter-spacing: .03em;
-          margin-bottom: 0;
         }
       ul{
 
@@ -708,6 +707,7 @@ body{
         li:first-child:before{
           display: none;
         }
+
         li{
             margin: 0 15px;
           position: relative;
