@@ -44,15 +44,40 @@ module.exports = {
 //      }
 //    }, 
             
-                  {
+     {
         test: /\.(png|jp(e*)g|svg)$/,  
         use: [{
             loader: 'url-loader',
+            loader: 'file-loader',
             options: { 
                 limit: 8000, // Convert images < 8kb to base64 strings
-                name: 'img/[hash]-[name].[ext]'
+//                name: 'img/[hash].[ext]'
+                name: 'img/[name].[ext]',
+             publicPath: '../',
+          outputPath:'',
+          useRelativePath: true
             } 
-        }]
+        },
+         {
+          loader: 'image-webpack-loader',
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 65
+                },
+                // optipng.enabled: false will disable optipng
+                optipng: {
+                  enabled: false,
+                },
+                pngquant: {
+                  quality: [0.65, 0.90],
+                  speed: 4
+                },
+                gifsicle: {
+                  interlaced: false,
+                }
+          }
+         }]
       },
       //File loader used to load fonts
 
@@ -74,15 +99,15 @@ module.exports = {
             
 //          name: "[name].[ext]",
 //            publicPath: "../fonts/[name]/[name].[ext]", // Take the directory into account
-          filename: `${PATHS.assets}fonts/[name]/[name].[ext]`,
-            
+             filename: `${PATHS.assets}fonts/[name]/[name].[ext]`,
              name: "fonts/[name]/[name].[ext]",
-//             publicPath: '',
+             publicPath: '../',
+          outputPath:'',
+          useRelativePath: true
 
         }
       },
-    },
-      {
+    },{
         test: /\.pug$/,
      
           loader: 'pug-loader',
@@ -92,15 +117,7 @@ module.exports = {
           },
     
       },
-            
 
-//    {
-//      test: /\.(png|jpg|gif|svg)$/,
-//      loader: 'file-loader',
-//      options: {
-//        name: '../img/[name].[ext]'
-//      }
-//    },
     {
       test: /\.s[ac]ss$/i,
       use: [
@@ -142,10 +159,10 @@ module.exports = {
     new MiniCssExtractPlugin({
         
  
-    filename: `${PATHS.assets}style.min.css`,
+    filename: `${PATHS.assets}css/min.css`,
    
         
-    publicPath: '/css'
+    publicPath: '../'
     }),
 //    new MiniCssExtractPlugin({
 //      filename: `${PATHS.src}/css/fonts.css`,
@@ -171,7 +188,7 @@ module.exports = {
     new CopyWebpackPlugin([
 //      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-      { from: `${PATHS.src}/img`, to: 'img' },
+//      { from: `${PATHS.src}/img`, to: 'img' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        

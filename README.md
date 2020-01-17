@@ -10,6 +10,7 @@ https://devhints.io/
 * cssnano
 * pug-loader | [Open link](https://pughtml.com) converter
 * html-loader
+* image-webpack-loader - optimizes your images 
 
 #### Plugins
 * Slick-carousel  [Open link](https://github.com/kenwheeler/slick/)   
@@ -24,4 +25,4 @@ https://devhints.io/
 
 port: 8132
 
-git commit -m '16.01.2020 19:--'
+git commit -m '17.01.2020 14:--'
