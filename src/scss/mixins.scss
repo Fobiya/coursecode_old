@@ -24,6 +24,11 @@
     left: 0;
     background: #9CC6DA;
     box-shadow: 0 0 15px rgba(33, 32, 32, 0.66);
+
+     @media (max-width:991px){
+           top: inherit;
+       bottom: 0;
+    }
   }
 
 // =========================================================== 

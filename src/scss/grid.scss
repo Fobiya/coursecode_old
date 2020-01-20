@@ -839,6 +839,10 @@ input[type=range] {
 .col .row {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  @media  only screen and (max-width: 600px) {
+        margin-left: -1rem;
+    margin-right: -1rem;
+  }
 }
 
 .section {
@@ -865,6 +869,9 @@ input[type=range] {
         clear: both;
     }
     .col {
+  @media  only screen and (max-width: 600px) {
+      padding: 0 1rem;
+  }
         float: left;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;

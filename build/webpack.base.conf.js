@@ -23,7 +23,7 @@ module.exports = {
     app: PATHS.src
   },
   output: {
-    filename: `${PATHS.assets}js/main.min.js`,
+    filename: `${PATHS.assets}js/main.min.js?v=[hash]`,
     path: PATHS.dist,
     publicPath: ''
   },
@@ -159,7 +159,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         
  
-    filename: `${PATHS.assets}css/min.css`,
+    filename: `${PATHS.assets}css/min.css?v=[hash]`,
    
         
     publicPath: '../'
@@ -188,8 +188,7 @@ module.exports = {
     new CopyWebpackPlugin([
 //      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-//      { from: `${PATHS.src}/img`, to: 'img' },
-//      { from: `${PATHS.src}/css`, to: 'css' }
+      { from: `${PATHS.src}/img`, to: 'img' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        
     ])

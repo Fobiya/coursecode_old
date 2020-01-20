@@ -26,7 +26,7 @@ body.compensate-for-scrollbar {
   touch-action: manipulation;
   transform: translateZ(0);
   width: 100%;
-  z-index: 99992;
+  z-index: 19999992;
 
   * {
     box-sizing: border-box;
@@ -47,10 +47,9 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-bg {
-  background: rgba(32, 34, 66, 0.85);
+  background: #1e1e1e;
   opacity: 0;
-
-  //    transition-duration: inherit;
+  transition-duration: inherit;
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
 }
@@ -64,14 +63,14 @@ body.compensate-for-scrollbar {
   direction: ltr;
   opacity: 0;
   position: absolute;
-  transition: opacity .25s ease, visibility 0s ease .25s;
+  transition: opacity .25s ease,visibility 0s ease .25s;
   visibility: hidden;
   z-index: 99997;
 }
 
 .fancybox-show-caption .fancybox-caption, .fancybox-show-infobar .fancybox-infobar, .fancybox-show-nav .fancybox-navigation .fancybox-button, .fancybox-show-toolbar .fancybox-toolbar {
   opacity: 1;
-  transition: opacity .25s ease 0s, visibility 0s ease 0s;
+  transition: opacity .25s ease 0s,visibility 0s ease 0s;
   visibility: visible;
 }
 
@@ -122,7 +121,7 @@ body.compensate-for-scrollbar {
   position: absolute;
   text-align: center;
   top: 0;
-  transition-property: transform, opacity;
+  transition-property: transform,opacity;
   white-space: normal;
   width: 100%;
   z-index: 99994;
@@ -151,7 +150,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide--html {
-  padding: 0px;
+  padding: 6px;
 }
 
 .fancybox-content {
@@ -161,10 +160,10 @@ body.compensate-for-scrollbar {
   max-width: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  padding: 44px;
   position: relative;
   text-align: left;
   vertical-align: middle;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.48);
 }
 
 .fancybox-slide--image .fancybox-content {
@@ -180,7 +179,7 @@ body.compensate-for-scrollbar {
   position: absolute;
   top: 0;
   transform-origin: top left;
-  transition-property: transform, opacity;
+  transition-property: transform,opacity;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -302,7 +301,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-button {
-  background: rgba(153, 153, 153, 0.48);
+  background: rgba(30, 30, 30, 0.6);
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -325,13 +324,7 @@ body.compensate-for-scrollbar {
   &:hover {
     color: #fff;
   }
-}
 
-.fancybox-button--close:hover {
-  background: #c462ff !important;
-}
-
-.fancybox-button {
   &:focus {
     outline: none;
   }
@@ -362,8 +355,6 @@ body.compensate-for-scrollbar {
     overflow: visible;
     position: relative;
     width: 100%;
-    fill: #000000;
-    color: #000;
 
     path {
       fill: currentColor;
@@ -392,7 +383,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-close-small {
   background: transparent;
-  border: 0 0 0 10px;
+  border: 0;
   border-radius: 0;
   color: #ccc;
   cursor: pointer;
@@ -406,20 +397,14 @@ body.compensate-for-scrollbar {
   &:hover {
     color: #fff;
     opacity: 1;
-    background: rgba(0, 48, 91, 0.54);
   }
 }
 
 .fancybox-slide--html .fancybox-close-small {
   color: currentColor;
-  padding: 5px;
+  padding: 10px;
   right: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.09);
-
-  &:hover {
-    background: rgba(0, 48, 91, 0.54);
-  }
 }
 
 .fancybox-slide--image.fancybox-is-scaling .fancybox-content {
@@ -472,11 +457,7 @@ body.compensate-for-scrollbar {
   z-index: 99996;
 }
 
-//@supports (padding:max(0px)) {
-//    .fancybox-caption {
-//        padding: 75px max(44px, env(safe-area-inset-right)) max(25px, env(safe-area-inset-bottom)) max(44px, env(safe-area-inset-left))
-//    }
-//}
+
 
 .fancybox-caption--separate {
   margin-top: -50px;
@@ -625,9 +606,8 @@ body.compensate-for-scrollbar {
 
 @media (max-height: 576px) {
   .fancybox-slide {
-    //        padding-left: 6px;
-    //        padding-right: 6px
- 
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   .fancybox-slide--image {
@@ -653,13 +633,6 @@ body.compensate-for-scrollbar {
     padding-left: 12px;
     padding-right: 12px;
   }
-
-  //    @supports (padding:max(0px)) {
-  //        .fancybox-caption {
-  //            padding-left: max(12px, env(safe-area-inset-left));
-  //            padding-right: max(12px, env(safe-area-inset-right))
-  //        }
-  //    }
 }
 
 .fancybox-share {
@@ -859,7 +832,7 @@ body.compensate-for-scrollbar {
   }
 
   &:focus:before {
-    opacity: 0.5;
+    opacity: .5;
   }
 
   &.fancybox-thumbs-active:before {
@@ -879,4 +852,9 @@ body.compensate-for-scrollbar {
   .fancybox-thumbs__list a {
     max-width: calc(100% - 10px);
   }
+}
+
+.compensate-for-scrollbar {
+  margin-right: 17px !important;
+  padding: 0 !important;
 }

@@ -1,7 +1,8 @@
 // NEED import
 import $ from 'jquery';
-import 'slick-carousel';
 //import '@fancyapps/fancybox';
+import 'slick-carousel';
+
 
 import './js/';
 // NEED import

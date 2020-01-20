@@ -1,7 +1,30 @@
 define(["jquery"], function($) {
     
-//    console.log('Fobiya'); 
+    console.log('Fobiya');
+// ===========================================================
+// SCROLL
+// ===========================================================
 
+  var height = $(window).scrollTop();
+
+  if(height <= 150 ) {
+    $('header').removeClass('back');
+  }
+
+  $(window).scroll(function() {
+      var height = $(window).scrollTop();
+
+      if(height < 150 ) {
+            $('header').removeClass('back');
+      } else {
+           $('header').addClass('back');
+      }
+  });
+
+
+// ===========================================================
+// END SCROLL
+// ===========================================================
 
 // ===========================================================
 // NAVIGATION MENU LEFT
