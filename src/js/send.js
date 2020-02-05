@@ -87,12 +87,6 @@ define(["jquery"], function($) {
                               $('form').trigger("reset");
                               setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
 
-
-                           $( document ).ready(function() {
-                                console.log( "ready!" );
-                            });
-
-
                           },
                           error: function(xhr, str) {
                               alert('ERROR: ' + xhr.responseCode);

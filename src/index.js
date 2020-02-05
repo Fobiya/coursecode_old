@@ -10,7 +10,3 @@ import './js/';
 // SCSS import
 import './scss/style.scss';
 //import './scss/font.sass';
-
-
-
-
