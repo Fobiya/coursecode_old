@@ -1,6 +1,11 @@
-## Fobiya Source code
+### Fobiya Source code
 
 https://devhints.io/
+
+#### Configuration Webpack
+*  ``port: 8134``
+* Last commit -  ``git commit -m '06.02.2020 02:30'``
+* compress css not url in file ``build/webpack.base.conf.js``  -  `` options: { sourceMap: true  /* , url: false  */ } ``
 
 #### Full bind - the main
 
@@ -17,12 +22,4 @@ https://devhints.io/
 * Fancybox [Open link](https://github.com/fancyapps/fancybox)  
 * Ionic Framework [Open link](https://ionicons.com/v2/)  
 * Pixel perfect my js
-* Forms validator input my js 
-
-#### Add
-* Css reset 
-* My Grid 
-
-port: 8134
-
-git commit -m '05.02.2020 22:--'
+* Forms validator input my js

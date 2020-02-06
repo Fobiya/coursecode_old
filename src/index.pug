@@ -2,24 +2,25 @@ doctype
 
 html(lang='en')
   head
-    title Sting Creative Marketing Website
+    - var title = "Demo Coursecode"
+    title #{title}
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
 
     link(rel='icon', type='static/ico', href='img/favicon.svg?v=13')
 
-    meta(property='og:url', content='http://stingcreativemarketing.com/')
-    meta(property='og:image', content='http://stingcreativemarketing.com/img/ogg.png?v=1.2')
+    meta(property='og:url', content='#{title}')
+    meta(property='og:image', content='/img/ogg.png?v=1.2')
     meta(property='og:image:width', content='300')
     meta(property='og:image:height', content='300')
 
-    meta(property='og:title', content='Sting Creative Marketing Website')
-    meta(property='og:site_name', content='Sting Creative Marketing Website')
-    meta(property='og:description', content='Sting Creative Marketing Website')
-    meta(property='og:type', content='Sting Creative Marketing Website')
-    meta(name='description', content='Sting Creative Marketing Website')
-    meta(name='keywords', content='Sting Creative Marketing Website')
+    meta(property='og:title', content='#{title}')
+    meta(property='og:site_name', content='#{title}')
+    meta(property='og:description', content='#{title}')
+    meta(property='og:type', content='#{title}')
+    meta(name='description', content='#{title}')
+    meta(name='keywords', content='#{title}')
 
     
   body <!--(data-img="img/1.png")-->
@@ -28,18 +29,14 @@ html(lang='en')
     //END bar-long
     
     header
-      .container
+      .container(hidden)
         .row
           .col.m3.s3.l3.xl3
             .box__logo
-              img.logo(src='img/logo-black.svg', alt='Logo')
-
+              img.logo(src='#', alt='Logo')
 
           .col.m9.s9.l9.xl9
-            a.link
-              span
-              span
-              span
+
             ul.menu
               li
                 a.scroll(href="#about" target="_blank") about
@@ -47,105 +44,25 @@ html(lang='en')
                 a.scroll(href="#services") services
               li
                 a.scroll(href="#contact") contact
-                  
-    .left__menu
-      ul.menu
-        li
-          a.scroll(href="#about" target="_blank") about
-        li
-          a.scroll(href="#services") services
-        li
-          a.scroll(href="#contact") contact
 
-    section.section__top
+    section.section__top(hidden)
       .container
         .row
           .col.m12.s12.l12.xl12
-            h1 Sting Creative Marketing
+            h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatem, iure saepe facere omnis provident, dolorum numquam eveniet praesentium quam.
             
-    section.section__1#about
-       .container
-        .row
-          .col.m12.s12.l12.xl6
-            h2 What is  Sting Creative Marketing all about?
-          .col.m12.s12.l12.xl5.offset-xl1
-            p Your presence cannot be validated without the right collaboration with the industry specialists. Still looking for your marketing solutions? Let us guide your brand, achieving the recognition you deserve! Our team consists of reputable industry professionals, up-to-date with market trends and trained to effectively provide you with the appropriate services for all your marketing needs!
-
-    section.section__2#services
-       .container
-        .row
-          .col.m12.s12.l12.xl12
-            h2 Boost Your Strategy With Our Services
-
-        .row
-          .col.m12.s12.l12.xl12
-            .block__slider
-              div
-               .block
-                  span 01
-                  p Integrated Marketing Strategy
-              div
-               .block
-                  span 02
-                  p Content &amp; Copy Strategy
-              div
-               .block
-                  span 03
-                  p Graphic &amp; Web Design
-              div
-               .block
-                  span 04
-                  p Web Development
-              div
-               .block
-                  span 05
-                  p Email Marketing Services
-              
+    section.section__1
+    section.section__2
     section.section__3
-       .container
-        .row
-          picture
-            source(srcset='img/bulbs.png', media='(min-width: 601px)')
-            source(srcset='img/bulbs-mob.png', media='(max-width: 600px)')
-            img.bulbs(srcset='img/bulbs.png', alt='bulbs')
-          .col.m12.s12.l12.xl12
-            h2 Partner with Sting Creative Marketing
+    section.section__4
+    section.section__5
 
-        .row
-          .col.m12.s12.l9.xl7
-            ul.list
-              li
-                img(src='img/strategy.png', alt='img1')
-                h5 Strategy
-                p Our team of experts are coming up with the best strategies! Expect instant solutions and targeted campaigns to boost your clicks, conversions &amp; subscriptions.
-              li
-                img(src='img/pencil.png', alt='img2')
-                h5 Content
-                p Your company’s message is important, and communicating it correctly is even more important! We provide you with enriched content that will send the appropriate messages to your audience.
-              li
-                img(src='img/design.png', alt='img3')
-                h5 Design
-                p We provide you with top-notch designs,  to attract your target audience. Let us elevate your visual identity with innovative tactics and designs according to the needs of your demographic.
-              li
-                img(src='img/web.png', alt='img4')
-                h5 Web
-                p Upgrade your website with the innovative services of our development team. We aim for responsive and performant user-experience, allowing you to meet your users’ needs.
-              li
-                img(src='img/email.png', alt='img5')
-                h5 Emails
-                p Get an effective email marketing strategy, configured appropriately to attract the attention of every customer. Speak their language and build funnels to ensure greater engagement.
-              li
-                img(src='img/social.png', alt='img6')
-                h5 Social Media
-                p The expectations and evolution of new things require quick and smart strategies with the necessary emphasis on social media. Let yourself be bold among the competition.
-
-    section.section__4#contact
+    section.section__999(hidden)
        .container
         .row
           .col.m12.s12.l8.xl7
             .block
-              h3 Contact US
-              p Partner with top professionals, to elevate your marketing to the highest level!! If you need any assistance, feel free to get in touch with us!
+
               .block__form
                 form(method='POST', action='javascript:void(null);')
                   // Hidden Required Fields
@@ -165,11 +82,12 @@ html(lang='en')
                   button.blue(type='submit', name='send') SEND
 
     script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+
     footer
       .container
         .row
           .col.m12.s12.l12.xl12
-            p &reg; 2020 StingCreativeMarketingLtd All Rights Reserved
+            p &reg; 2020 #{title} All Rights Reserved
 
 
 

@@ -23,28 +23,6 @@ define(["jquery"], function($) {
 // ===========================================================
 // END SCROLL
 // ===========================================================
-
-// ===========================================================
-// NAVIGATION MENU LEFT
-// ===========================================================
-
-    $(function() {
-        $('a.link').click(function() {
-          setTimeout(function(){
-            $('body').addClass('menu_');
-          }, 400);
-
-        });
-    });
-
-    $(document).mouseup(function(e) { // web document click event
-       $('body').removeClass('menu_');
-    });
-
-// ===========================================================
-// END NAVIGATION MENU LEFT
-// ===========================================================
-
   
 
 // ===========================================================  
@@ -111,29 +89,9 @@ define(["jquery"], function($) {
 // =========================================================== 
 // END Scroll BAR 
 // ===========================================================
-    
-    
-    
-    
-    
-    $('.blue').click(function progress() {
-        var pers = 0;
-        var interval = setInterval(function() {
-            let t = pers++ + "%";
-            $(".pers").text(t);
-            $(".pl_l").css("width", t);
-            if (pers == 60) $(".pr span").css("color", "#fff");
-            if (pers > 80) clearInterval(interval);
-        }, 1);
-    });
 
-    
-$('.anim-button').click(function(){
 
-  $('ul.menu__ul').toggleClass('open');
 
-});  
-    
 // =========================================================== 
 // SLICK SLIDER FULL NAVIGATION
 // ===========================================================    
@@ -235,12 +193,6 @@ $('.anim-button').click(function(){
 // ===========================================================    
 
 
-    $(document).ready(function(){
-//        $('[type="tel"]').inputmask("+1(999)999-99-99");
-//        $('[name="zipcode"]').inputmask('99999'); 
-//        $('[name="ferstname"]').inputmask();
-//        $('[name="lastname"]').inputmask();
-    });
 
 // =========================================================== 
 // END INPUT MASK

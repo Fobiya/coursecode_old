@@ -2,7 +2,7 @@
 // FONTS style
 // =========================================================== 
 
-//  @import "font";
+  @import "font";
 
 // =========================================================== 
 // END FONTS style
@@ -21,7 +21,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #9CC6DA;
+    background: #881014;
     box-shadow: 0 0 15px rgba(33, 32, 32, 0.66);
 
      @media (max-width:991px){
@@ -33,6 +33,82 @@
 // =========================================================== 
 // Scroll BAR
 // =========================================================== 
+
+
+// ===========================================================
+// Title H1-6 TEG style
+// ===========================================================
+
+
+
+    @media (min-width: 992px) {
+
+        @for $i from 1 through 6{
+
+          h#{$i}{
+
+              font:70px - ($i * 7) $b;
+              color: #000;
+
+              text-transform: capitalize;
+              letter-spacing: .01em;
+              margin-bottom: 43px - ($i * 3);
+
+            span{
+               font:80px - ($i * 10) $b;
+            }
+          }
+        }
+
+    }
+
+
+    @media (max-width: 991px) and (min-width: 601px) {
+
+        @for $i from 1 through 6{
+          h#{$i}{
+
+              font:60px - ($i * 9) $b;
+              color: #000;
+
+              text-transform: capitalize;
+              letter-spacing: .01em;
+              margin-bottom: 43px - ($i * 3);
+
+            span{
+               font:80px - ($i * 10) $b;
+            }
+          }
+        }
+
+    }
+
+
+    @media (max-width: 600px){
+
+        @for $i from 1 through 6{
+
+          h#{$i}{
+
+              font:50px - ($i * 10) $b;
+              color: #000;
+
+              text-transform: capitalize;
+
+              margin-bottom: 43px - ($i * 3);
+
+            span{
+               font:80px - ($i * 10) $b;
+            }
+          }
+        }
+
+    }
+
+
+// ===========================================================
+// END Title H1-6 TEG style
+// ===========================================================
 
 
 // ===========================================================
