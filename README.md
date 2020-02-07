@@ -4,7 +4,7 @@ https://devhints.io/
 
 #### Configuration Webpack
 *  ``port: 8134``
-* Last commit -  ``git commit -m '06.02.2020 02:30'``
+* Last commit -  ``git commit -m '07.02.2020 20:--'``
 * compress css not url in file ``build/webpack.base.conf.js``  -  `` options: { sourceMap: true  /* , url: false  */ } ``
 
 #### Full bind - the main
