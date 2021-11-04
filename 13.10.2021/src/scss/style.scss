@@ -1,0 +1,497 @@
+// =========================================================== 
+// Import
+// ===========================================================
+@import "font";
+@import "grid";
+@import "mixins";
+@import "modules/slick";
+@import "modules/ionicons";
+@import "modules/fancybox";
+// =========================================================== 
+// END Import
+// ===========================================================   
+
+ 
+// ===========================================================
+// Media
+// ===========================================================
+
+@mixin wid($size) {
+  @if $size == 1200 {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == 992-1199 {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  } @else if $size == 992{
+    @media (min-width: 992px) { @content; }
+  } @else if $size == 991 {
+    @media (max-width: 991px) { @content; }
+  } @else if $size == 601-991 {
+    @media (min-width: 601px) and (max-width: 991px) { @content; }
+  } @else if $size == 600 {
+    @media (max-width: 600px) { @content; }
+  }@else if $size == 500 {
+    @media (max-width: 500px) { @content; }
+  }@else if $size == 450 {
+    @media (max-width: 450px) { @content; }
+  }@else if $size == 400 {
+    @media (max-width: 400px) { @content; }
+  }@else if $size == 350 {
+    @media (max-width: 350px) { @content; }
+  }
+}
+
+//@include wid(992-1199) {   }
+
+// ===========================================================
+// END Media
+// ===========================================================
+
+// ===========================================================
+// Before and After
+// ===========================================================
+
+
+    %bef-aft{
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      position: relative;
+    }
+
+//    @extend %bef-aft;
+
+// ===========================================================
+// Before and After
+// ===========================================================
+
+// ===========================================================
+// Pixel Perfect
+// ===========================================================
+
+//.front__end {
+//    z-index: -1001 !important;
+//    opacity: .5 !important;
+//}
+//
+//.zindex {
+//    z-index: -1000 !important;
+//}
+
+// ===========================================================
+// END Pixel Perfect
+// ===========================================================
+// ===========================================================
+// Button BLUE
+// ===========================================================
+
+  .blue , %blue {
+      @media(max-width: 600px) {
+          max-width: 210px;
+          min-height: 50px;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 45px 0 0;
+      background-color: #9CC6DA;
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      min-height: 65px;
+      cursor: pointer;
+      border-radius: 0px;
+      border: 0;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.18);
+      //  font: 20px MyriadPro-Light;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      &:hover {
+          color: #fff;
+          background-color: #6e9cb2;
+          box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+      }
+      &:focus,
+      &:active {
+          background-color: #6e9cb2;
+      }
+  }
+
+//  .black{
+//      @extend %blue;
+//  }
+
+// ===========================================================
+// END Button BLUE
+// ===========================================================
+
+// ===========================================================
+// Button Purpur
+// ===========================================================
+
+.purpur{
+border-radius: 10px;
+background-image: linear-gradient(180deg, #6e5fb8 0%, #b488f2 100%);
+z-index: 2;
+
+ transition: all 1.7s ease;
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    min-height: 70px;
+    cursor: pointer;
+
+    border: 0;
+    box-shadow: none;
+    //  font: 20px MyriadPro-Light;
+
+color: #ffffff;
+font-size: 24px;
+font-weight: 300;
+line-height: 40px;
+  text-transform: uppercase;
+
+    text-decoration: none;
+
+
+
+    &:hover {
+        color: #fff;
+     transition: all 1.7s ease;
+   background-image: linear-gradient(180deg,#b488f2 0%,  #6e5fb8 100%);
+    }
+    &:focus,
+    &:active {
+
+    }
+}
+
+// ===========================================================
+// END Button Purpur
+// ===========================================================
+
+
+// ===========================================================
+// Button orang
+// ===========================================================
+
+.orang{
+border-radius: 30px;
+background: #e58920;
+z-index: 2;
+
+ transition: all 1.7s ease;
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 0;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    min-height: 60px;
+    cursor: pointer;
+
+    border: 0;
+    box-shadow: none;
+    //  font: 20px MyriadPro-Light;
+
+
+    text-decoration: none;
+
+  color: #ffffff;
+font-size: 18px;
+font-weight: 300;
+line-height: 16px;
+
+
+    &:hover {
+      background: #965914;
+      color: #ffffff;
+    }
+    &:focus,
+    &:active {
+
+    }
+}
+
+// ===========================================================
+// END Button orang
+// ===========================================================
+
+
+// ===========================================================
+// Button BLACK
+// ===========================================================
+
+.black{
+
+    @extend %blue;
+
+    background-color: #000;
+    color: #fff;
+
+    &:hover{
+      color: #c0c0c0;
+        background-color: #0d0d0d;
+    }
+}
+
+// ===========================================================
+// END Button BLACK
+// ===========================================================
+
+
+
+    p {
+      line-height: 24px;
+      font-size: 15px;
+
+      span{
+
+      }
+    }
+
+// ===========================================================
+// SLICK STYLE
+// ===========================================================
+.block__slider {
+    display: none;
+}
+
+div.slick-slider.slick-initialized {
+    display: block;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 25px;
+    z-index: 3;
+}
+
+.slick-slider .ion-chevron-right {
+    right: 0;
+}
+
+.slick-slider .ion-chevron-left {
+    left: 0;
+}
+
+// ===========================================================
+// END SLICK STYLE
+// ===========================================================
+// ===========================================================
+// MENU
+// ===========================================================
+// ===========================================================
+// END MENU
+// ===========================================================
+// ===========================================================
+// HEADER style
+// ===========================================================
+    header{
+      transition:  all .7s ease;
+      background-color: transparent;
+
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+// ===========================================================
+// END HEADER style
+// ===========================================================
+// ===========================================================
+// SECTION style
+// ===========================================================
+[class*='section__']{
+
+  min-height: 450px;
+  position: relative;
+
+}
+
+body{
+  [class*='section__']:nth-child(2n){
+    background: #efefef;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+}
+[class*="section__"] {
+
+  @for $i from 1 through 3 {
+    h#{ $i } {
+      font-size: 60px - ($i * 7);
+      @media (min-width: 992px) and (max-width: 1199px) {
+        font-size: 60px - ($i * 10);
+        & {
+          font-size: 38px;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size: 60px - ($i * 12);
+        & {
+          font-size: 35px;
+        }
+      }
+      @media (min-width: 501px) and (max-width: 767px) {
+        font-size: 60px - ($i * 13);
+        & {
+          font-size: 35px;
+        }
+      }
+      @media (max-width: 500px) {
+        font-size: 60px - ($i * 13);
+        & {
+          font-size: 30px;
+        }
+      }
+      color: #000;
+    }
+  }
+}
+
+
+
+
+
+section.block__1 {
+//  background: url(../img/server_1_back.png) no-repeat top center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  border-bottom: 2px solid #f57c00;
+  
+  @media (min-width: 993px) {
+    min-height: 450px;
+    height: 100%;
+  }
+  
+  
+  	@include wid(992) {
+		padding: 100px 0;
+	}
+
+	@include wid(991) {
+		.container > .row > div {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+}
+
+
+
+// ===========================================================
+// END SECTION style
+// ===========================================================
+// ===========================================================
+// FOOTER style
+// ===========================================================
+    footer {
+      padding: 50px 0;
+      border-top: 1px solid #050b10;
+
+        p{
+          @media (max-width:600px){
+              font: 14px $l;
+          }
+          font: 17px $l;
+          color: #000;
+          text-align: center;
+          font-weight: 900;
+          letter-spacing: .03em;
+        }
+      ul{
+
+        @media (max-width:500px){
+              flex-direction: column;
+        }
+        display: flex;
+        justify-content: center;
+        margin: 13px 0;
+        li:first-child:before{
+          display: none;
+        }
+
+        li{
+            margin: 0 15px;
+          position: relative;
+
+                  @media (max-width:500px){
+             margin: 5px 15px;
+                    text-align: center;
+        }
+
+            @media (min-width:501px){
+              &:before{
+                content: "";
+                display: block;
+                width: 1px;
+                height: 15px;
+                margin: 3px 0;
+                position: absolute;
+                left: -13px;
+                top: 0;
+                background: #000;
+              }
+            }
+
+          a{
+            @media (max-width:600px){
+              font: 14px $l;
+            }
+            font: 17px $l;
+            font-weight: 900;
+             color: #000;
+            text-decoration: underline;
+            &:hover{
+               color: #3d6c82;
+               text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+      }
+    }
+// ===========================================================
+// END FOOTER style
+// ===========================================================
+
+
+
+
+
+// ===========================================================
+// @media element
+// ===========================================================
+
+
+  [class*='section__']{
+    @include wid(1200) {
+      padding: 100px 0;
+    }
+    @include wid(992-1199) {
+      padding: 100px 0;
+    }
+    @include wid(601-991) {
+      padding: 50px 0;
+    }
+    @include wid(600) {
+      padding: 30px 0;
+    }
+  }
+
+// ===========================================================
+// END @media element
+// ===========================================================

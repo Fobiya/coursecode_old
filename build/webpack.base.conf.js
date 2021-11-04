@@ -44,7 +44,7 @@ module.exports = {
 //    }, 
             
      {
-        test: /\.(png|jp(e*)g|svg)$/,  
+        test: /\.(png|jp(e*)g)$/,  
         use: [{
             loader: 'url-loader',
             loader: 'file-loader',
@@ -79,6 +79,20 @@ module.exports = {
          }]
       },
       //File loader used to load fonts
+            
+      {
+        test: /\.(svg)$/,  
+        use: [{
+//          loader: 'file-loader',
+          loader: 'image-webpack-loader',
+            options: { 
+
+//                name: 'img/[hash].[ext]'
+                name: 'img/[name].[ext]',
+
+            } 
+        }]
+      },    
 
     {
       // Match woff2 in addition to patterns like .woff?v=1.1.1.
@@ -92,7 +106,7 @@ module.exports = {
 
           // url-loader sets mimetype if it's passed.
           // Without this it derives it from the file extension
-          mimetype: "application/font-woff",
+//          mimetype: "application/font-woff",
 
           // Output below fonts directory
             
@@ -158,7 +172,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         
  
-    filename: `${PATHS.assets}css/min.css?v=[hash]`,
+    filename: `${PATHS.assets}css/roman.css?v=[hash]`,
    
         
     publicPath: '../'

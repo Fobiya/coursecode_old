@@ -70,6 +70,7 @@
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "npm-install-webpack-plugin": "^4.0.5",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",

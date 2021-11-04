@@ -1,0 +1,55 @@
+// ===========================================================
+// ROOT
+// ===========================================================
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;1,400;1,600&family=Montserrat:wght@200;300;400;600&display=swap');
+
+  :root {
+    font: googleapis;
+    --ma: 'Montserrat Alternates', sans-serif;
+    --m: 'Montserrat', sans-serif;
+    
+  }  
+  :root {
+    --gren: linear-gradient(59.75deg, #C5C5A8 -2.61%, #E2E1CF 76.3%, #E2E1CF 76.3%);
+    --roz: linear-gradient(102.48deg, #976464 -29.03%, #CFA5A5 97.75%);;
+  }
+
+  a, p, span, li, strong, input {
+   font: 15px/1.2em var(--m);
+    line-height: 1.25em;
+    color: #424242;
+  }
+
+  h1, h2, h3, h4, h5{
+     font-family: var(--ma);
+      color: #424242;
+  }
+
+  h2{
+    font: 900 45px/1.2em var(--m);
+  }
+
+
+
+
+  :root {
+    
+//    --color1: #f1f1f1;
+//
+//    --color2: #d4d9dd;
+//    --color3: #bbb6b6;
+//    --color4: #424246;
+//    --color5: #212121;
+//    --background1: #222831;
+//    --background2: #16054a;
+//    
+//    --color6: #e7eaf5;
+      
+  }
+
+
+
+// ===========================================================
+// END ROOT
+// ===========================================================

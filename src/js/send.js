@@ -1,15 +1,24 @@
 "use strict";
 define(["jquery"], function($) {
-
+  
+//  var domainString = window.location.origin;
+//document.domain = string;
+  
   $(function () {
       $("[name=send]").click(function () {
 
           $(":input.error").removeClass('error');
+//          $(":select.error").removeClass('error');
+          $(":input").parent('.field').removeClass('border_dashed');
+          $("select").parent('.field').removeClass('border_dashed');
+     
           $(".allert").remove();
           var error;
           var btn = $(this);
           var ref = btn.closest('form').find('[required]');
           var msg = btn.closest('form').find('input, textarea, select');
+
+
           var send_btn = btn.closest('form').find('[name=send]');
 
            $(ref).each(function() {
@@ -17,7 +26,7 @@ define(["jquery"], function($) {
                   var errorfield = $(this);
                   $(this).addClass('error').parent('.field') /*.append('<span class="allert">Fill this field</span>') */;
                   error = 1;
-                  $(":input.error:first").focus();
+                  $(":input.error:first");
                   return;
               } else {
                   var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
@@ -26,7 +35,7 @@ define(["jquery"], function($) {
   //                        $("[name=email]").val('');
                           $(this).addClass('error').parent('.field') /*.append('<span class="allert">Enter a valid e-mail</span>') */;
                           error = 1;
-                          $(":input.error:first").focus();
+                          $(":input.error:first");
                       }
                   }
                   var patterntel = /^()[0-9]{9,18}/i;
@@ -35,39 +44,14 @@ define(["jquery"], function($) {
   //                        $("[name=phone]").val('');
                           $(this).addClass('error').parent('.field') /*.append('<span class="allert">Enter a valid phone number</span>') */;
                           error = 1;
-                          $(":input.error:first").focus();
+                          $(":input.error:first");
                       }
                   }
 
-                   var patterntext = /^([a-z])[a-z]/i;
-                  if ($(this).attr("type") == 'text') {
-                      if(!patterntext.test($(this).val())) {
-                          var errorfield = $(this);
-                          $(this).addClass('error').parent('.field') /*.append('<span class="allert">input letters only</span>') */;
-                          error = 1;
-                          $(":input.error:first").focus();
-                      }
-                  }
-
-                     if ($(this).attr("type") == 'checkbox') {
-                     if (!$(this).prop('checked')) {
-
-
-
-                          $(this).addClass('errore');
-                          $('label.p').addClass('errore');
-
-
-
-                          error = 1;
-
-                      }
-                  }
-
-
+                
               }
-          })
 
+  });
 
           if (!(error == 1)) {
               $(send_btn).each(function () {
@@ -81,11 +65,15 @@ define(["jquery"], function($) {
 
                       $.ajax({
                           type: 'POST',
-                          url: 'send.php',
+                          url: 'https://idealstroy.od.ua/send.php',
+                        
+              
                           data: msg,
                           success: function() {
                               $('form').trigger("reset");
                               setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
+                            
+                             window.location.href = '/success';
 
                           },
                           error: function(xhr, str) {
@@ -105,4 +93,8 @@ define(["jquery"], function($) {
   });
 
 });
+
+
+
+
 

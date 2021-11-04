@@ -2,6 +2,16 @@ body.compensate-for-scrollbar {
   overflow: hidden;
 }
 
+.fancybox-slide--video .fancybox-content{
+    max-width: 100%;
+  }
+
+.fancybox-infobar{
+  span{
+    display: initial !important;
+  }
+}
+
 .fancybox-active {
   height: auto;
 }
@@ -56,7 +66,9 @@ body.compensate-for-scrollbar {
 
 .fancybox-is-open .fancybox-bg {
   opacity: .9;
-  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+//  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  background-color: #1b1b1b;
+    backdrop-filter: blur(100px);
 }
 
 .fancybox-caption, .fancybox-infobar, .fancybox-navigation .fancybox-button, .fancybox-toolbar {
@@ -154,16 +166,37 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-content {
-  background: #fff;
-  display: inline-block;
-  margin: 0;
-  max-width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 44px;
+//  background: #fff;
+//  display: inline-block;
+//  margin: 0;
+//  max-width: 100%;
+//  overflow: auto;
+//  -webkit-overflow-scrolling: touch;
+//  padding: 44px;
+//  position: relative;
+//  text-align: left;
+//  vertical-align: middle;
   position: relative;
-  text-align: left;
-  vertical-align: middle;
+  
+    display: inline-block;
+    margin: 0;
+    overflow: auto;
+    vertical-align: middle;
+    -webkit-overflow-scrolling: touch;
+  
+  
+//    min-height: 430px;
+//      min-width: 300px;
+  
+    border-radius: 0;
+    box-shadow: 0 0px 20px rgba(220, 228, 240, 0.23);
+
+//    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+//  border-radius: 30px;
+  
+//    border: 3px solid rgba(22,5,72,.10980392156862745);
 }
 
 .fancybox-slide--image .fancybox-content {
@@ -393,6 +426,8 @@ body.compensate-for-scrollbar {
   right: -12px;
   top: -44px;
   z-index: 401;
+  
+  
 
   &:hover {
     color: #fff;
@@ -403,8 +438,18 @@ body.compensate-for-scrollbar {
 .fancybox-slide--html .fancybox-close-small {
   color: currentColor;
   padding: 10px;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+//  background: #F0F0F0;
+  
+  &:hover{
+//  background: #b7b7b7; 
+//    box-shadow:  0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
 }
 
 .fancybox-slide--image.fancybox-is-scaling .fancybox-content {
@@ -855,6 +900,6 @@ body.compensate-for-scrollbar {
 }
 
 .compensate-for-scrollbar {
-  margin-right: 17px !important;
+//  margin-right: 17px !important;
   padding: 0 !important;
 }

@@ -1,95 +1,152 @@
 doctype
 
-html(lang='en')
+html(lang='ru')
   head
-    - var title = "Demo Coursecode"
-    title #{title}
-    meta(charset='UTF-8')
+    - var title = ""
+    - var keywords = ""
+    - var description = ""
+    title Beta
+
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
 
-    link(rel='icon', type='static/ico', href='img/favicon.svg?v=13')
+    link(rel='icon', type='static/ico', href='img/favicon.ico?v=13')
 
-    meta(property='og:url', content='#{title}')
-    meta(property='og:image', content='/img/ogg.png?v=1.2')
+    meta(property='og:url', content='https:')
+    meta(property='og:image', content='img/ogg.png?v=1.3')
     meta(property='og:image:width', content='300')
     meta(property='og:image:height', content='300')
 
-    meta(property='og:title', content='#{title}')
-    meta(property='og:site_name', content='#{title}')
-    meta(property='og:description', content='#{title}')
+    meta(property='og:title', content='')
+    meta(property='og:site_name', content='')
+    meta(property='og:description', content='')
     meta(property='og:type', content='#{title}')
-    meta(name='description', content='#{title}')
-    meta(name='keywords', content='#{title}')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
 
     
-  body <!--(data-img="img/1.png")-->
-    //bar-long
+    
+  body.info(data-img='img/1.png')
+
     .bar-long
-    //END bar-long
     
+    .scroll__menu
+      .container
+
     header
-      .container(hidden)
+      .container
         .row
-          .col.m3.s3.l3.xl3
-            .box__logo
-              img.logo(src='#', alt='Logo')
+          .col.m5.s12.l5.xl5
+            ul.main__
+             li
+              a(href='#sec-1') #sec-1
+             li
+              a(href='#sec-2') #sec-2
+             li
+              a(href='#sec-3') #sec-3
+             li
+              a(href='#sec-4') #sec-4
+             li
+              a(href='#sec-5') #sec-5
 
-          .col.m9.s9.l9.xl9
-
-            ul.menu
-              li
-                a.scroll(href="#about" target="_blank") about
-              li
-                a.scroll(href="#services") services
-              li
-                a.scroll(href="#contact") contact
-
-    section.section__top(hidden)
+              
+          
+    section#sec-1.section__1
       .container
         .row
           .col.m12.s12.l12.xl12
-            h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatem, iure saepe facere omnis provident, dolorum numquam eveniet praesentium quam.
-            
-    section.section__1
-    section.section__2
-    section.section__3
-    section.section__4
-    section.section__5
-
-    section.section__999(hidden)
-       .container
+            h2 section__1
+            img(src='img/car.svg', alt='car')
+              
+          
+    section#sec-2.section__2
+      .container
         .row
-          .col.m12.s12.l8.xl7
-            .block
+          .col.m12.s12.l12.xl12
+            h2 section__2
+          
+    section#sec-3.section__3
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2 section__3
+          
+    section#sec-4.section__4
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2 section__4
+          
+    section#sec-5.section__5
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2 section__5
+  
 
-              .block__form
-                form(method='POST', action='javascript:void(null);')
-                  // Hidden Required Fields
-                  .form_input
-                    span.field
-                      input.name(type='text', name='name', required='', value='', placeholder='Name')
-                  .form_input
-                    span.field
-                      input.mail(type='email', name='email', required='', value='', placeholder='Email')
-                  .form_input
-                    span.field
-                      input.ferstname(type='text', name='subject', required='', value='', placeholder='Subject')
-                  .form_input
-                    span.field
-                      textarea.textarea(name='message', required='', value='', placeholder='Message')
+                
+                  
+    a.bot_modal(data-fancybox='', data-src='#modal-1', href='javascript:;') Open Modal 1
+    // //// MODAL ////
+    #modal-1.modal__style.modal(style='display: none;')
+      .content_modal
+        h3 title
 
-                  button.blue(type='submit', name='send') SEND
+        form(method='POST', action='javascript:void(null);')
+          // Hidden Required Fields
+
+
+          .form_input
+            span.field
+              input(type='text', name='name', required='', value='', placeholder='Name')
+
+          .form_input
+            span.field
+              input.phone(type='text', name='phone', required='', value='', placeholder='Phone')
+
+          button.green(type='submit', name='send') Send
+          
+          
+          
+    a.bot_modal(data-fancybox='', data-src='#modal-2', href='javascript:;') Open Modal 2
+    // //// MODAL ////
+    #modal-2.modal__style.modal(style='display: none;')
+      .content_modal
+        h3 title
+
+        form(method='POST', action='javascript:void(null);')
+          // Hidden Required Fields
+
+
+          .form_input
+            span.field
+              input(type='text', name='name', required='', value='', placeholder='Name')
+
+          .form_input
+            span.field
+              input.phone(type='text', name='phone', required='', value='', placeholder='Phome')
+              
+          .form_input
+            span.field
+              textarea.textarea(name='message', required='', value='', placeholder='You message')
+
+          button.green(type='submit', name='send') Send
 
     script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script.
+       $(function () {
+       
+        $('[data-fancybox]').fancybox({
+        //  touch: false,
+          autoFocus: false
+        });
 
-    footer
-      .container
-        .row
-          .col.m12.s12.l12.xl12
-            p &reg; 2020 #{title} All Rights Reserved
+        $("#test").on('click', function() {
 
-
+        $.fancybox.open('<div class="content__poly"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae saepe cum a mollitia soluta, consequuntur dolor, rem ipsa voluptas sint dignissimos, at ratione accusantium quos. Sapiente, officia quo ipsam quis distinctio. Repellendus id distinctio, placeat, consequatur molestias in error voluptate dolorem voluptatum aliquam, eligendi minima.</p><div>');
+      });
+      });
 
 
 

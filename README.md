@@ -1,20 +1,34 @@
 ### Fobiya Source code
 
 [![npm](https://badgen.net/npm/v/@babel/core)](https://github.com/Fobiya/coursecode)
-*  ``port: 8134``
-* Last commit -  ``git commit -m '14.04.2020 19:--'``
+
+
 *  ``npm uninstall node-sass --save-dev``
 * add mixin @media
+* add includ SVG link and scss b64
 
-*  ``
-@include wid(1200) {   } 
-@include wid(992-1199) {   } 
-@include wid(991) {   } 
-@include wid(601-991) {   }  
-@include wid(600) {   }  
 
-``
-* 
+*  @include wid(1200-1499) {   } 
+*  @include wid(1200)      {   } 
+*  @include wid(992-1199)  {   } 
+*  @include wid(601-991)   {   } 
+*  @include wid(600)       {   } 
+
+* ------------------------------------
+
+*  @include wid(1500) {   }  >
+*  @include wid(1200) {   }  >
+*  @include wid(992)  {   }  >
+*  @include wid(991)  {   }  <
+*  @include wid(600)  {   }  <
+
+
+*  @include wid(500)  {   }  <
+*  @include wid(450)  {   }  <
+*  @include wid(400)  {   }  <
+*  @include wid(350)  {   }  <
+
+
 
 
 ### Table
