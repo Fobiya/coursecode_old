@@ -1,28 +1,30 @@
-$o: Open Sans
-$g: TTCommons-Regular
-$i: IgraSans
-$nm: NeueMachina-Regular
-$gsb: Gilroy-Semibold
-$gb: Gilroy-Bold
+$gu: Gilroy-UltraLight
+$gl: Gilroy-Light
+$v: VickeyRegular
+$s: Gilroy-Semibold
+$d: Gilroy-Bold
+$m: Gilroy-Medium
 
-$n: NeueMachina-Medium
-$nb: NeueMachina-Bold
+$hi: HelveticaNeue-LightItalic
+
+$r: RoxboroughCF
+$bb: YouMurdererBB
 
 // ===========================================================
 
-$fm: FuturaMediumC
-$fd: FuturaDemiC
-$fl: FuturaLightC
-$p: ProbaPro-Medium
+//$fm: FuturaMediumC
+//$fd: FuturaDemiC
+//$fl: FuturaLightC
+//$p: ProbaPro-Medium
 
 //$i: NotoSans-Italic
-$icon: ionicons
+//$icon: ionicons
 
 // ===========================================================
 // NotoSans FONTS
 // ===========================================================
 
-$font-list: $fm $fd $fl $p
+$font-list: $r $bb $hi
 //$font-list: $icon
 //
 =font-includ
@@ -41,19 +43,19 @@ $font-list: $fm $fd $fl $p
 // ionicons FONT
 // ===========================================================
 
-$icon-list: $icon
-
-=font-icon-includ
-  @each $icon-name in $icon-list
-    @font-face
-
-      font-family: $icon;
-      font-style: normal;
-      font-weight: 400;
-      src: url(../fonts/#{$icon-name}/#{$icon-name}.eot?#iefix) format("embedded-opentype"), url(../fonts/#{$icon-name}/#{$icon-name}.woff) format("woff"), url(../fonts/#{$icon-name}/#{$icon-name}.ttf) format("truetype")
-
-
-+font-icon-includ
+//$icon-list: $icon
+//
+//=font-icon-includ
+//  @each $icon-name in $icon-list
+//    @font-face
+//
+//      font-family: $icon;
+//      font-style: normal;
+//      font-weight: 400;
+//      src: url(../fonts/#{$icon-name}/#{$icon-name}.eot?#iefix) format("embedded-opentype"), url(../fonts/#{$icon-name}/#{$icon-name}.woff) format("woff"), url(../fonts/#{$icon-name}/#{$icon-name}.ttf) format("truetype")
+//
+//
+//+font-icon-includ
 
 // ===========================================================
 // END ionicons FONT

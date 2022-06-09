@@ -1,18 +1,40 @@
 // =========================================================== 
 // Import
 // ===========================================================
-@import "color";
-@import "font";
-@import "input";
+//@import "minireset";
+//@import "color";
+@import "reset";
+@import "font"; 
 @import "grid";
+@import "form";
+
+
+
 @import "modules/slick";
-@import "modules/ionicons";
+//@import "modules/ionicons";
 @import "modules/fancybox";
 
-// =========================================================== 
-// END Import
-// ===========================================================   
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Mulish:wght@500&display=swap');
+//@import url('https://awakendhltstg.wpengine.com/wp-content/plugins/vimeo-sync-memberships/css/rvs-user-styles.css?ver=5.3.9');
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css');
 
+:root {
+  --r: 'RoxboroughCF';
+  --l: 'Lato';
+  --m: 'Mulish';
+  --hi: 'HelveticaNeue-LightItalic';
+}
+
+
+
+a, p, span, li, strong, input {
+ font-family: var(--l);
+  line-height: 1.2em;
+}
+h1, h2, b, h3, h4, h5, button, label{
+   font-family: var(--l);
+    line-height: 1.2em;
+}
 
 
 // =========================================================== 
@@ -54,7 +76,7 @@
   }
 }
 
-//  @include wid(1200-1499) {   } 
+
 //  @include wid(1200)      {   } 
 //  @include wid(992-1199)  {   } 
 //  @include wid(601-991)   {   } 
@@ -74,60 +96,23 @@
 //  @include wid(400)  {   }  <
 //  @include wid(350)  {   }  <
 
-
-
-
 // ===========================================================
 // END Media
 // ===========================================================
-
-
-
-
-// ===========================================================
-// @media element
-// ===========================================================
-
-
-  [class*='section__']{
-
-    @include wid(1200){
-      padding: 100px 0;
-    }
-    @include wid(992-1199){
-      padding: 80px 0;
-      br{
-        display: none;
-      }
-
-    }
-    @include wid(601-991){
-      padding: 70px 0;
-    }
-    @include wid(600) {
-      padding: 50px 0;
-    }
-  }
-
-// ===========================================================
-// END @media element
-// ===========================================================
-
 
 
 // ===========================================================
 // Before and After
 // ===========================================================
 
-
     %bef-aft{
       content: '';
-      display: flex;
+      display: block;
       width: inherit;
       height: inherit;
       position: relative;
       pointer-events: none;
-    } 
+    }
 
 //    @extend %bef-aft;
 
@@ -135,33 +120,8 @@
 // Before and After
 // ===========================================================
 
-
-// =========================================================== 
-// Scroll BAR
-// =========================================================== 
-
-  .bar-long {
-    height: 3px;
-    width: 0;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background:  #424242;
-    box-shadow: 0 0 15px rgba(33, 32, 32, 0.66);
-
-     @media (max-width:991px){
-           top: inherit;
-       bottom: 0;
-    }
-  }
-
-// =========================================================== 
-// Scroll BAR
-// =========================================================== 
-
 // ===========================================================
-// Button
+// Button ALL
 // ===========================================================
 
    %button {
@@ -170,19 +130,19 @@
       justify-content: center;
       align-items: center;
      
-      padding: 0 15px;
+
 
 
       height: auto;
-      min-height: 50px;
+     
       cursor: pointer;
-      border-radius: 0px;
+//      border-radius: 0px;
       border: 0;
      
 //      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.18);
       //      letter-spacing: 0.05em;
       text-decoration: none;
-      cursor: pointer;
+
 
       &:hover {
 
@@ -201,88 +161,42 @@
 
 
 // ===========================================================
-// END Button
+// END Button ALL
 // ===========================================================
 
 
-  .download{
-      @extend %button;
-    
-      background: #EEF0F2;
-      border: 1px solid #E2E5E9;
-      box-sizing: border-box;
-      border-radius: 20px;
-    
-      min-height: 36px;
-      max-height: 36px;
-    
-      max-width: 135px;
-
-      font: 500 14px/1.2em var(--p);
-      color: #000000;
-    
-      &:before{
-        @extend %bef-aft;
-        width: 10px;
-        height: 12px;
-        margin-right: 12px;
-      }
-    
-  }
 
 
-  a.profile{
-      @extend %button;
+.orange{
     
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    
-      border-radius: 20px;
-    
-      padding: 0;
+  @extend %button;
+  
+    background: #E55D45;
+    box-shadow: 20px 20px 60px rgba(229, 93, 69, 0.6);
+    border-radius: 100px;
+  
+    color: #fff;
+    font:  700 14px/1.2em var(--l);
 
-    
-        border: double 1px transparent !important;
-        background-image: linear-gradient(white, white), radial-gradient(circle at top left, #EBB26E,#DB496F) !important;
-        background-origin: border-box !important;
-        background-clip: content-box, border-box !important;
-    
-    
-    
-    
-        min-height: 36px;
-        max-height: 36px;
+    width: clamp(150px, 100vw, 150px);
+    height: 44px;
+  
 
-        max-width: 131px;
-        min-width: 131px;
+    &:hover{
+        background: #d65640;
+    box-shadow: 20px 20px 60px rgba(229, 93, 69, 0.8);
+    }
+  
 
-        font: 500 14px/1.2em var(--p);
-        color: #000000;
-    
-        background: none;
-        text-decoration: inherit;
-    
-     &:before{
-        @extend %bef-aft;
-        width: 12px;
-        height: 12px;
-        margin-right: 12px;
-      }    
-     &:after{
-        @extend %bef-aft;
-         background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAMAAABRhm3UAAAAG1BMVEUAAAAQEBAICAgNDQ0LCwsMDAwODg4NDQ0NDQ2BlYxlAAAACHRSTlMAECBgb3+gr5ohdrwAAAAgSURBVHjaHcGBAQAQAALBD9H+E4s7xsdMLXBiah8eCS4HrABdKgvGtgAAAABJRU5ErkJggg==);
-
-        width: 6px;
-        height: 5px;
-        margin-left: 14px;
-      }
-
+    &:focus,
+    &:active {
+        background: #d65640;
+    box-shadow: 20px 20px 60px rgba(229, 93, 69, 0.8);
+    }
     
 }
 
 
-
 // ===========================================================
 // END keyframes
 // ===========================================================
@@ -292,6 +206,31 @@
 // ===========================================================
 // END keyframes
 // ===========================================================
+
+
+// =========================================================== 
+// Scroll BAR
+// =========================================================== 
+
+  .bar-long {
+    height: 3px;
+    width: 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    box-shadow: 0 0 15px rgba(33, 32, 32, 0.66);
+
+     @media (max-width:991px){
+           top: inherit;
+       bottom: 0;
+    }
+  }
+
+// =========================================================== 
+// Scroll BAR
+// =========================================================== 
 
 // ===========================================================
 // SLICK SLIDER STYLE
@@ -461,8 +400,114 @@
 
 
 
+
+
+
+
+
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    
+    li{
+      width: 10px;
+      height: 10px;
+      background: #e8d7ac;
+      border-radius: 50%;
+      margin: 0px 3.5px;
+      cursor: pointer;
+      opacity: .8;
+      
+      transition: all .7s ease;
+      &.slick-active{
+        opacity: 1;
+             background: #5d4060; 
+        box-shadow: 0 0 15px #5d4060;
+      }
+    }
+    
+    button{
+      display: none;
+    }
+    
+  }
+
+    .block__slider {
+        display: none !important;
+    }
+
+    div.slick-slider.slick-initialized {
+        display: block !important;
+      
+      opacity: 1;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 25px;
+        z-index: 3;
+    }
+
+    .slick-slider .ion-chevron-right {
+        right: 0;
+    }
+
+    .slick-slider .ion-chevron-left {
+        left: 0;
+    }
+
+
+.box__arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  a{
+    position: relative;
+    display: flex;
+    
+    &.prev__{
+      &:before{
+        @extend %bef-aft;
+
+//        background: url(../img/arrow.svg) no-repeat;
+        width: 18px;
+        height: 34px;
+      }
+      
+      
+    }
+    &.next__{
+      &:before{
+        @extend %bef-aft;
+
+//        background: url(../img/arrow.svg) no-repeat;
+        width: 18px;
+        height: 34px;
+           transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+//  
+//}
+
 // ===========================================================
-// END SLICK SLIDER STYLE
+// END SLICK STYLE
+// ===========================================================
+
+
+// ===========================================================
+// MENU
+// ===========================================================
+
+// ===========================================================
+// END MENU
 // ===========================================================
 
 
@@ -470,30 +515,41 @@
 // cursor
 // ===========================================================
 
-
-
-
-
 // ===========================================================
 // cursor
 // ===========================================================
 
 
+// ===========================================================
+// Pixel Perfect
+// ===========================================================
+
+  .front__end {
+      z-index: -1001 !important;
+      opacity: .5 !important;
+    top:0;
+  }
+
+  .zindex {
+      z-index: -1000 !important;
+      top:0;
+  }
+
+// ===========================================================
+// END Pixel Perfect
+// ===========================================================
 
 
 // ===========================================================
 // Scroll Style
 // ===========================================================
 
-
 //*::-webkit-scrollbar{
 //	background: none;
 //	background-color: none;
 //    box-shadow: none;
 //}
-//
-//
-//
+
 //*::-webkit-scrollbar-thumb{
 //	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 //    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -501,33 +557,29 @@
 //	border-radius: 10px;
 //}
 
-
 //---------------------------------------------------------------------
-//
-//
-//
-*::-webkit-scrollbar {
-//  display: none;
-}
 
-*::-webkit-scrollbar {
-//    width: 10px;
-//  opacity: 0;
-//  transition: all .7s ease;
-    
-}
-// 
+//    *::-webkit-scrollbar {
+//      display: none;
+//    }
+//
+//    *::-webkit-scrollbar {
+//        width: 10px;
+//      opacity: 0;
+//      transition: all .7s ease;
+//
+//    }
+
 //*::-webkit-scrollbar-track {
 ////    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 ////    border-radius: 10px;
 //}
-// 
+
 //*::-webkit-scrollbar-thumb:hover {
 //    opacity: 1;
 //    border-radius: 10px;
 //    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 //}
-
 
 // ===========================================================
 // END Scroll Style
@@ -538,21 +590,10 @@
 // HEADER style
 // ===========================================================
 
-
-    header{
-      height: 60px;
-      background: #fff;
+   header{
       
-      .main__{
-        display: flex;
-          li{
-            margin-right: 20px;
-            a{
-              font: 16px/1.2em var(--ma);
-            }
-          }
-      }
-    }
+ 
+   }
 
 
 // ===========================================================
@@ -560,13 +601,57 @@
 // ===========================================================
 
 
+.right__menu {
+  
+      position: fixed;
+      left: 100%;
+      width: 100%;
+      //      max-width: 400px;
 
+      height: 100%;
+      z-index: 999;
+      transition: .7s;
+      display: block;
+      will-change: transform;
+      overflow-y: auto;
 
-/* ===========================================================Â  BOX MENU  */
+        &.open {
+          transform: translateX(-100%);
+          box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.15);
 
+          background: rgba(255, 255, 255, 0.44);
+          box-shadow: inset 69.8333px -69.8333px 69.8333px rgba(149, 149, 149, 0.093), inset -69.8333px 69.8333px 69.8333px rgba(255, 255, 255, 0.093);
+          backdrop-filter: blur(29.33px);
 
-/* END ===========================================================Â  BOX MENU  */
+        }
+  
+      .bock__top{
 
+      }
+
+}
+
+.open__menu{
+  overflow: hidden;
+//  padding-right: 17px;
+//  margin-right: 17px;
+  
+    &:before{
+  //    @extend %bef-aft;
+  //
+  //
+  //    transition: all .2s ease;
+  //    top: 0;
+  //    left: 0;
+  //    width: 100vw;
+  //    height: 100vh;
+  //    background: rgba(0, 0, 0, .5);
+  //    z-index: 990;
+  //    position: absolute;
+
+   }
+  
+}
 
 
 // ===========================================================
@@ -574,7 +659,9 @@
 // ===========================================================
 
 
-
+// ===========================================================
+// END SECTION style
+// ===========================================================
 
   body{
 
@@ -587,38 +674,53 @@
     
     [class*='section__1'] h2:before {
       @extend %bef-aft;
-        background: url(../img/car.svg);
+//        background: url(../img/car.svg);
         width: 11px;
         height: 11px;
 
     }
   }
 
+ section.home__1{
+    
+//      background: #f9e6da url(../img/) no-repeat top/cover;
+   
+      overflow: hidden;
+      position: relative;
 
+      @include wid(992)      { padding: 187px 0  160px 0; }
+      @include wid(601-991)  { padding: 187px 0  160px 0; }
+      @include wid(600)      { padding: 187px 0  160px 0; }
+   
+     &>.container:nth-child(1)>.row:nth-child(1)>div:nth-child(1){
 
+     }
+   
+   
+     .title{
+        color: #F9F5EE;
+        letter-spacing: .025em;
 
-// ===========================================================
-// massage
-// ===========================================================
+        @include wid(992)      {  font: 700 96px/1.07em var(--r); }
+        @include wid(601-991)  {  font: 700 64px/1.07em var(--r); }
+        @include wid(600)      {  font: 700 44px/1.07em var(--r); }
+     }
+   
+   p{
+        color: #F9F5EE;
+        letter-spacing: .02em;
 
+        @include wid(992)      {  font: 400 20px/1.3em var(--l); }
+        @include wid(601-991)  {  font: 400 20px/1.3em var(--l); }
+        @include wid(600)      {  font: 400 18px/1.3em var(--l); }
+     }
 
-// ===========================================================
-// END massage style
-// ===========================================================
+  }     
 
-
-// ===========================================================
-// cookie
-// ===========================================================
-
-// ===========================================================
-// END cookie style
-// ===========================================================
 
 // ===========================================================
 // FORM STYLE
 // ===========================================================
-
 
 // ===========================================================
 // END FORM STYLE
@@ -626,23 +728,23 @@
 
 
 // ===========================================================
-// END SECTION style
-// ===========================================================
-// ===========================================================
 // FOOTER style
 // ===========================================================
 
-  footer {
-    border-top: 1px solid #414141;
-    background: var(--gren);
-    padding: 55px 0 48px;
 
-    z-index: 1;
-    position: relative;
+  footer{
     
+    position: relative;
+    background: #232c34;
 
-}
+    
+     
+      @include wid(992)      { padding-top: 12px; padding-bottom: 42px; }
+      @include wid(601-991)  { padding-bottom: 38px; }  
+      @include wid(600)      { padding-bottom: 60px; } 
 
+    
+  }
 
 
 // ===========================================================
@@ -650,3 +752,29 @@
 // ===========================================================
 
 
+
+// ===========================================================
+// @media element
+// ===========================================================
+
+
+  [class*='section__']{ 
+
+    @include wid(1200){
+      padding: 150px 0;
+    }
+    @include wid(992-1199){
+      padding: 100px 0;
+
+    }
+    @include wid(601-991){
+      padding: 70px 0;
+    }
+    @include wid(600) {
+      padding: 48px 0;
+    }
+  }
+
+// ===========================================================
+// END @media element
+// ===========================================================

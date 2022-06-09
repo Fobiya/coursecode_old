@@ -1,6 +1,9 @@
 .slick-slider {
   position: relative;
-  display: block;
+  display: none;
+  
+  opacity: 0;
+  transition: opacity .7s ease;
   width: 100%;
 }
 
@@ -8,8 +11,8 @@
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 0 !important;
-  padding: 0 !important;
+//  margin: 0 !important;
+//  padding: 0 !important;
 
   &:focus {
     outline: none;

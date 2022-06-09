@@ -11,9 +11,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
+  margin: 0;
 	padding: 0;
 	border: 0;
+//	font-size: 100%;
+//	font: inherit;
 	vertical-align: baseline;
 }
 
@@ -534,6 +536,7 @@ textarea {
  ::-webkit-file-upload-button {
     -webkit-appearance: button;
     /* 1 */
+    font: inherit;
     /* 2 */
 }
 
@@ -805,11 +808,18 @@ input[type=range] {
 /* This is needed for some mobile phones to display the Google Icon font properly */
 
 .container {
-  margin: 0 auto;
-  max-width: 1217px;
+    margin: 0 auto;
+      max-width: 1310px;
   z-index: 2;
   position: relative;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
 
 @media only screen and (min-width: 601px) {
     .container {
@@ -870,7 +880,7 @@ input[type=range] {
     }
     .col {
   @media  only screen and (max-width: 600px) {
-      padding: 0 1rem;
+      padding: 0 .8rem;
   }
         float: left;
         -webkit-box-sizing: border-box;
