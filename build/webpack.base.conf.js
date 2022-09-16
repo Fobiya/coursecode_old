@@ -64,14 +64,14 @@ module.exports = {
               options: {
                 mozjpeg: {
                   progressive: true,
-                  quality: 80
+                  quality: 99
                 },
                 // optipng.enabled: false will disable optipng
                 optipng: {
                   enabled: false,
                 },
                 pngquant: {
-                  quality: [0.80, 0.90],
+                  quality: [0.90, 0.99],
                   speed: 4
                 },
                 gifsicle: {

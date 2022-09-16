@@ -14,7 +14,7 @@ html(lang='en')
     link(rel='icon', type='static/ico', href='static/favicon.ico?v=13')
 
     meta(property='og:url', content='https:')
-    meta(property='og:image', content='img/ogg.png?v=1.3')
+    meta(property='og:image', content='img/logo.png?v=1.3')
     meta(property='og:image:width', content='300')
     meta(property='og:image:height', content='300')
 
@@ -57,7 +57,7 @@ html(lang='en')
         .row
           .col.m12.s12.l12.xl12
             a.logo(href='javascript:;')
-              img.logo__img(src='img/logo_black.svg', alt='logo_black')
+              img.logo__img(src='img/logo.svg', alt='logo_black')
  
 
           
@@ -65,25 +65,28 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
-              
+            img(src='img/logo.png', alt='logo_black')
           
     section#sec-2.section__2
       .container
         .row
           .col.m12.s12.l12.xl12
             h2 section__2
+            .logo_before
           
     section#sec-3.section__3
       .container
         .row
           .col.m12.s12.l12.xl12
             h2 section__3
+            .logo_svg
           
     section#sec-4.section__4
       .container
         .row
           .col.m12.s12.l12.xl12
             h2 section__4
+            .logo_40
           
     section#sec-5.section__5
       .container
@@ -131,7 +134,7 @@ html(lang='en')
           
           
           
-    a.bot_modal.none(data-fancybox='', data-src='#modal-2', href='javascript:;') Open Modal 2
+    a.bot_modal(data-fancybox='', data-src='#modal-2', href='javascript:;') Open Modal 2
     // //// MODAL ////
     #modal-2.modal__style.modal(style='display: none;')
       .content_modal

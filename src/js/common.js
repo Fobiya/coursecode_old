@@ -634,124 +634,124 @@ for(let div of document.querySelectorAll('footer')){
 // ===========================================================    
 
 
-  
-    $('.home__4 .next__').click(function() { 
-    $slider__4.slick('slickNext');
-  });
- 
-  $('.home__4 .prev__').click(function() {
-    $slider__4.slick('slickPrev');
-  });
-    
-    
-  var $slider__4 = $('.slider__4');
-  
-  
+//  
+//    $('.home__4 .next__').click(function() { 
+//    $slider__4.slick('slickNext');
+//  });
+// 
+//  $('.home__4 .prev__').click(function() {
+//    $slider__4.slick('slickPrev');
+//  });
+//    
+//    
+//  var $slider__4 = $('.slider__4');
+//  
+//  
+//
+//    $slider__4.slick({
+//        fade: true,
+//        cssEase: 'linear',
+//      
+//        arrows: false,
+//        dots: false,
+//      
+//        autoplay: false,
+//        speed: 1000,
+//      
+//        infinite: true,
+//      
+//        adaptiveHeight: true,
+//      
+//        slidesToShow: 1,
+//        slidesToScroll: 1,
+////        responsive: [{
+////                breakpoint: 1500,
+////                settings: {
+////                    arrows: true,
+////                    slidesToShow: 4,
+////                    slidesToScroll: 1,
+////                    infinite: true,
+////                }
+////            },
+////                     {
+////                breakpoint: 1300,
+////                settings: {
+////                    arrows: true,
+////                    slidesToShow: 3,
+////                    slidesToScroll: 1,
+////                    infinite: true,
+////                }
+////            },
+////            {
+////                breakpoint: 1000,
+////                settings: {
+////                    arrows: true,
+////                    slidesToShow: 2,
+////                    slidesToScroll: 1,
+////                    infinite: true,
+////                }
+////            },
+////            {
+////                breakpoint: 430,
+////                settings: {
+////                    arrows: true,
+////                    slidesToShow: 1,
+////                    slidesToScroll: 1,
+////                    infinite: true,
+////                }
+////            }
+////        ]
+//    });
 
-    $slider__4.slick({
-        fade: true,
-        cssEase: 'linear',
-      
-        arrows: false,
-        dots: false,
-      
-        autoplay: false,
-        speed: 1000,
-      
-        infinite: true,
-      
-        adaptiveHeight: true,
-      
-        slidesToShow: 1,
-        slidesToScroll: 1,
-//        responsive: [{
-//                breakpoint: 1500,
-//                settings: {
-//                    arrows: true,
-//                    slidesToShow: 4,
-//                    slidesToScroll: 1,
-//                    infinite: true,
-//                }
-//            },
-//                     {
-//                breakpoint: 1300,
-//                settings: {
-//                    arrows: true,
-//                    slidesToShow: 3,
-//                    slidesToScroll: 1,
-//                    infinite: true,
-//                }
-//            },
-//            {
-//                breakpoint: 1000,
-//                settings: {
-//                    arrows: true,
-//                    slidesToShow: 2,
-//                    slidesToScroll: 1,
-//                    infinite: true,
-//                }
-//            },
-//            {
-//                breakpoint: 430,
-//                settings: {
-//                    arrows: true,
-//                    slidesToShow: 1,
-//                    slidesToScroll: 1,
-//                    infinite: true,
-//                }
-//            }
-//        ]
-    });
-
-
-  
-  
-  
-$('.flat.section__9 .left__').click(function() { 
-  $gallery.slick('slickNext');
-});
-
-$('.flat.section__9 .right__').click(function() {
-  $gallery.slick('slickPrev');
-});
 
   
-var $gallery = $('.flat.section__9 .box__slider__8');
-
-
-  $gallery.slick({
-    arrows: false,
-    speed: 550,
-    fade: true,
-    cssEase: 'linear',
-    swipe: true,
-    swipeToSlide: true,
-    touchThreshold: 10
-  }); 
-
-
-var slideCount = null;
-
-$gallery.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.rslide-count-wrap').find('.rtotal');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.rslide-count-wrap').find('.rcurrent');
-  $el.text(currentSlide + 1);
-} 
   
+  
+//$('.flat.section__9 .left__').click(function() { 
+//  $gallery.slick('slickNext');
+//});
+//
+//$('.flat.section__9 .right__').click(function() {
+//  $gallery.slick('slickPrev');
+//});
+//
+//  
+//var $gallery = $('.flat.section__9 .box__slider__8');
+//
+//
+//  $gallery.slick({
+//    arrows: false,
+//    speed: 550,
+//    fade: true,
+//    cssEase: 'linear',
+//    swipe: true,
+//    swipeToSlide: true,
+//    touchThreshold: 10
+//  }); 
+//
+//
+//var slideCount = null;
+//
+//$gallery.on('init', function(event, slick){
+//  slideCount = slick.slideCount;
+//  setSlideCount();
+//  setCurrentSlideNumber(slick.currentSlide);
+//});
+//
+//$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+//  setCurrentSlideNumber(nextSlide);
+//});
+//
+//function setSlideCount() {
+//  var $el = $('.rslide-count-wrap').find('.rtotal');
+//  $el.text(slideCount);
+//}
+//
+//function setCurrentSlideNumber(currentSlide) {
+//  var $el = $('.rslide-count-wrap').find('.rcurrent');
+//  $el.text(currentSlide + 1);
+//} 
+//  
 
 
 // =========================================================== 
@@ -1140,3 +1140,34 @@ function setCurrentSlideNumber(currentSlide) {
 
 });
 
+
+
+//function initlazyimg() {
+//    var scripts = document.getElementsByTagName('script');
+//    var section = scripts[scripts.length-1].parentNode;
+//    var images = section.getElementsByTagName('img');
+//    for (var i = 0; i < images.length; i++) {
+//        var datasrc = images[i].getAttribute('data-src');
+//        var src = document.createAttribute('src');
+//        src.value = datasrc;
+//        images[i].setAttributeNode(src);
+//        images[i].removeAttribute('datasrc');
+//    }
+//}
+//
+//  
+//  function source() {
+//    var scripts = document.getElementsByTagName('script');
+//    var section = scripts[scripts.length-1].parentNode;
+//    var images = section.getElementsByTagName('source');
+//    for (var i = 0; i < images.length; i++) {
+//        var datasrc = images[i].getAttribute('data-src');
+//        var src = document.createAttribute('src');
+//        src.value = datasrc;
+//        images[i].setAttributeNode(src);
+//        images[i].removeAttribute('datasrc');
+//    }
+//}
+
+//  initlazyimg();
+//  source();

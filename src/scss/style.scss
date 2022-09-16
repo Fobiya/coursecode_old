@@ -591,6 +591,14 @@ h1, h2, b, h3, h4, h5, button, label{
 // ===========================================================
 
    header{
+     
+     .logo{
+       max-width: 200px;
+       height: auto;
+       
+       display: flex;
+       
+     }
       
  
    }
@@ -692,6 +700,9 @@ h1, h2, b, h3, h4, h5, button, label{
       @include wid(601-991)  { padding: 187px 0  160px 0; }
       @include wid(600)      { padding: 187px 0  160px 0; }
    
+   
+   
+   
      &>.container:nth-child(1)>.row:nth-child(1)>div:nth-child(1){
 
      }
@@ -714,8 +725,49 @@ h1, h2, b, h3, h4, h5, button, label{
         @include wid(601-991)  {  font: 400 20px/1.3em var(--l); }
         @include wid(600)      {  font: 400 18px/1.3em var(--l); }
      }
+   
+   
 
-  }     
+  }   
+
+[class*='section__']{
+  .logo_before{
+        &:before{
+          @extend %bef-aft;
+
+          background: url(../img/logo.png) no-repeat ;
+          background-size: contain;
+
+          width: 100px;
+          height: 100px;
+          margin-left: 14px;
+        }
+  }
+  .logo_svg{
+        &:before{
+          @extend %bef-aft;
+
+          background: url(../img/logo.svg) no-repeat ;
+          background-size: contain;
+
+          width: 100px;
+          height: 100px;
+          margin-left: 14px;
+        }
+  }
+  .logo_40{
+        &:before{
+          @extend %bef-aft;
+
+          background: url(../img/logo_40.svg) no-repeat ;
+          background-size: contain;
+
+          width: 40px;
+          height: 40px;
+          margin-left: 14px;
+        }
+  }
+}
 
 
 // ===========================================================
@@ -725,6 +777,24 @@ h1, h2, b, h3, h4, h5, button, label{
 // ===========================================================
 // END FORM STYLE
 // ===========================================================
+
+
+
+
+
+
+
+// ===========================================================
+// keyframes STYLE
+// ===========================================================
+
+
+// ===========================================================
+// END keyframes STYLE
+// ===========================================================
+
+
+
 
 
 // ===========================================================
