@@ -1,29 +1,7 @@
 define(["jquery"], function($) {
   
 // ===========================================================  
-  
-//  $('header').addClass('open');
-  
- 
-  $('.home__5 .list a[data-num]').click(function(){
 
-    
-       var num_data = $(this).data('num');
-    
-   $('.home__5 .list li').removeClass('open');
-    $(this).parent().addClass('open');
-    
-   $('.home__5 .post li').removeClass('open');
-    
-       $('.home__5 .post li:nth-child('+ num_data + ')').addClass('open');
-    
-     
-    
-//    console.log(numberNum);
-  });  
- 
-
-  
   
   
 
@@ -623,203 +601,7 @@ for(let div of document.querySelectorAll('footer')){
 // End NAVIGATION LOGO SCROLL TOP
 // ===========================================================  
 	
-	
 
-    
-
-
-
-// =========================================================== 
-// SLICK SLIDER FULL NAVIGATION
-// ===========================================================    
-
-
-//  
-//    $('.home__4 .next__').click(function() { 
-//    $slider__4.slick('slickNext');
-//  });
-// 
-//  $('.home__4 .prev__').click(function() {
-//    $slider__4.slick('slickPrev');
-//  });
-//    
-//    
-//  var $slider__4 = $('.slider__4');
-//  
-//  
-//
-//    $slider__4.slick({
-//        fade: true,
-//        cssEase: 'linear',
-//      
-//        arrows: false,
-//        dots: false,
-//      
-//        autoplay: false,
-//        speed: 1000,
-//      
-//        infinite: true,
-//      
-//        adaptiveHeight: true,
-//      
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-////        responsive: [{
-////                breakpoint: 1500,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 4,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////                     {
-////                breakpoint: 1300,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 3,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////            {
-////                breakpoint: 1000,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 2,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////            {
-////                breakpoint: 430,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 1,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            }
-////        ]
-//    });
-
-
-  
-  
-  
-//$('.flat.section__9 .left__').click(function() { 
-//  $gallery.slick('slickNext');
-//});
-//
-//$('.flat.section__9 .right__').click(function() {
-//  $gallery.slick('slickPrev');
-//});
-//
-//  
-//var $gallery = $('.flat.section__9 .box__slider__8');
-//
-//
-//  $gallery.slick({
-//    arrows: false,
-//    speed: 550,
-//    fade: true,
-//    cssEase: 'linear',
-//    swipe: true,
-//    swipeToSlide: true,
-//    touchThreshold: 10
-//  }); 
-//
-//
-//var slideCount = null;
-//
-//$gallery.on('init', function(event, slick){
-//  slideCount = slick.slideCount;
-//  setSlideCount();
-//  setCurrentSlideNumber(slick.currentSlide);
-//});
-//
-//$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-//  setCurrentSlideNumber(nextSlide);
-//});
-//
-//function setSlideCount() {
-//  var $el = $('.rslide-count-wrap').find('.rtotal');
-//  $el.text(slideCount);
-//}
-//
-//function setCurrentSlideNumber(currentSlide) {
-//  var $el = $('.rslide-count-wrap').find('.rcurrent');
-//  $el.text(currentSlide + 1);
-//} 
-//  
-
-
-// =========================================================== 
-// END SLICK SLIDER FULL NAVIGATION 
-// ===========================================================       
-
-
-// =========================================================== 
-// SLICK SLIDER FULL NAVIGATION
-// ===========================================================    
-
-  
-//  $('a.next__2').click(function() { 
-//    $slick__.slick('slickNext');
-//  });
-// 
-//  $('a.prev__2').click(function() {
-//    $slick__.slick('slickPrev');
-//  });
-//
-//  var $slick__ = $('.single__slider__2');
-//  
-//  
-//    $slick__.slick({
-//        
-//        arrows: false,
-//        dots: false,
-//        autoplay: false,
-//        speed: 1000,
-//        infinite: false,
-//        slidesToShow: 3,
-//        slidesToScroll: 1,
-//        adaptiveHeight: true,
-////                customPaging: function(slider, i) {
-////      // this example would render "tabs" with titles
-////      return '<span class="dot"></span>';
-////    },
-//      
-//        responsive: [{
-//            breakpoint: 1250,
-//            settings: {
-//                arrows: false,
-//                slidesToShow: 2,
-//                slidesToScroll: 1,
-//                infinite: true,
-//            }
-//          },
-//          {
-//            breakpoint: 670,
-//            settings: {
-//                arrows: false,
-//                slidesToShow: 1,
-//                slidesToScroll: 1,
-//                infinite: true,
-//            }
-//          }                     
-//        ]
-//    });
-//  
-
-
-// =========================================================== 
-// END SLICK SLIDER FULL NAVIGATION 
-// ===========================================================       
-    
-
-    
-  
   
 //  
 //class cssClassTogglerScroll{
@@ -1142,20 +924,20 @@ for(let div of document.querySelectorAll('footer')){
 
 
 
-//function initlazyimg() {
-//    var scripts = document.getElementsByTagName('script');
-//    var section = scripts[scripts.length-1].parentNode;
-//    var images = section.getElementsByTagName('img');
-//    for (var i = 0; i < images.length; i++) {
-//        var datasrc = images[i].getAttribute('data-src');
-//        var src = document.createAttribute('src');
-//        src.value = datasrc;
-//        images[i].setAttributeNode(src);
-//        images[i].removeAttribute('datasrc');
-//    }
-//}
-//
-//  
+function initlazyimg() {
+    var scripts = document.getElementsByTagName('script');
+    var section = scripts[scripts.length-1].parentNode;
+    var images = section.querySelectorAll('img.lazy__');
+    for (var i = 0; i < images.length; i++) {
+        var datasrc = images[i].getAttribute('data-src');
+        var src = document.createAttribute('src');
+        src.value = datasrc;
+        images[i].setAttributeNode(src);
+//        images[i].removeAttribute('data-src');
+    }
+}
+
+  
 //  function source() {
 //    var scripts = document.getElementsByTagName('script');
 //    var section = scripts[scripts.length-1].parentNode;
@@ -1169,5 +951,5 @@ for(let div of document.querySelectorAll('footer')){
 //    }
 //}
 
-//  initlazyimg();
+  initlazyimg();
 //  source();

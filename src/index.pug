@@ -24,6 +24,7 @@ html(lang='en')
     meta(property='og:type', conten= '' + keywords + ''  )
     meta(name='description', conten= '' + description + '' )
     meta(name='keywords'  conten= '' + keywords + '' )
+    script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
 
   body.info(data-img='img/1.png')
 
@@ -62,6 +63,8 @@ html(lang='en')
 
           
     section#sec-1.section__1
+      video#video_1( playsinline='', autoplay='', muted='', loop='', preload='none')
+        source(src='video/background.mp4', type='video/mp4')
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -71,7 +74,23 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
-            h2 section__2
+            h2 @splidejs/splide
+            #post__slid.splide
+              .splide__track
+                ul.splide__list
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+                  li.splide__slide
+                    img(src='img/logo.svg', alt='logo_brand_1')
+
             .logo_before
           
     section#sec-3.section__3
@@ -80,7 +99,7 @@ html(lang='en')
           .col.m12.s12.l12.xl12
             h2 section__3
             .logo_svg
-          
+            img.lazy__(data-src='img/logo.svg', alt='logo_brand_1')
     section#sec-4.section__4
       .container
         .row
@@ -159,8 +178,8 @@ html(lang='en')
 
 
 
-    script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+
+    //script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
     script.
       // console.log('index.pug');
 

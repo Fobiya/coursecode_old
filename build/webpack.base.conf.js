@@ -28,7 +28,9 @@ module.exports = {
   },
   module: {
 
-    rules: [{
+    rules: [
+
+      {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
@@ -64,14 +66,14 @@ module.exports = {
               options: {
                 mozjpeg: {
                   progressive: true,
-                  quality: 99
+                  quality: 80
                 },
                 // optipng.enabled: false will disable optipng
                 optipng: {
                   enabled: false,
                 },
                 pngquant: {
-                  quality: [0.90, 0.99],
+                  quality: [0.80, 0.90],
                   speed: 4
                 },
                 gifsicle: {
@@ -206,12 +208,32 @@ module.exports = {
       filename: './index.html',
     
     }),    
+
 //    new HtmlWebpackPlugin({
 //      hash: false,
 //      template: `${PATHS.src}/home.pug`,
 //      filename: './home.html'
-//    }),       
-
+//    }),
+//       
+//
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/paid.pug`,
+//      filename: './paid.html'
+//    }),
+//
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/stai.pug`,
+//      filename: './stai.html'
+//    }),
+//
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/page.pug`,
+//      filename: './page.html'
+//    }),
+    
     
 //    new HtmlWebpackPlugin({
 //      hash: false,
@@ -221,7 +243,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-//      { from: `${PATHS.src}/img`, to: 'img' },
+      { from: `${PATHS.src}/video`, to: 'video' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        
     ])

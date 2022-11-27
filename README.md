@@ -1,47 +1,83 @@
-### Source code
+### Source code Fobiya
 
-[![npm](https://badgen.net/npm/v/@babel/core)](https://github.com/Fobiya/coursecode)
+[![npm](https://badgen.net/npm/v/@babel/core)](https://github.com/Fobiya/coursecode_old)
 
 https://nodejs.org/download/release/v14.16.0/
 
+
 *  ``npm uninstall node-sass --save-dev``
+*  ``port: 9007``
+
+##### Copyright (c) 2022
+
+
+https://devhints.io/
+
+#### Configuration Webpack
+
+* compress css not url in file ``build/webpack.base.conf.js``  -  `` options: { sourceMap: true  /* , url: false  */ } ``
+
+#### Full bind - the main
+
+* css / sass / scss / less - loader
+* autoprefixer
+* min-css
+* cssnano
+* pug-loader | [Open link](https://pughtml.com) converter
+* html-loader
+* image-webpack-loader - optimizes your images / png,jpg,webp,svg
+* font mixin 
+
+#### Plugins
+* Splide is a lightweight/Splide is a lightweight [Open link](https://splidejs.com/)
+* Fancybox [Open link](https://github.com/fancyapps/fancybox)
+* Ionic Framework [Open link](https://ionicons.com/v2/)
+
+* Pixel perfect my js
+* Forms validator input my js
+* lazylod img js
+
+#### DELETE Plugins
+* Slick-carousel  [Open link](https://github.com/kenwheeler/slick/)
+* Flickity [Open link](https://flickity.metafizzy.co/)
+
+
+
+
 
 #### MEDIA
 ``` scss
 @mixin wid($size) {
    @if $size == 1500 {
-    @media (min-width: 1500px) { @content; }
+    @media (min-width: 1500px) { @content; 
+     content: '1500px > ';  }
   } @else if $size == 1200-1499 {
-    @media (min-width: 1201px) and (max-width: 1499px) { @content; }
+    @media (min-width: 1200px) and (max-width: 1499px) { @content;  content: '1200-1499'; }
   } @else if $size == 1200 {
-    @media (min-width: 1200px) { @content; }
+    @media (min-width: 1200px) { @content;  content: '1200 > ';  }
   } @else if $size == 992-1199 {
-    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+    @media (min-width: 992px) and (max-width: 1199px) { @content; content: '992-1199'; }
   } @else if $size == 992-1300 {
-    @media (min-width: 992px) and (max-width: 1130px) { @content; }
+    @media (min-width: 992px) and (max-width: 1130px) { @content; content: '992-1300';  }
   } @else if $size == 992{
-    @media (min-width: 992px) { @content; }
+    @media (min-width: 992px) { @content; content: '992 > ';  }
   } @else if $size == 991 {
-    @media (max-width: 991px) { @content; }
+    @media (max-width: 991px) { @content; content: '991 < '; }
   } @else if $size == 601-991 {
-    @media (min-width: 601px) and (max-width: 991px) { @content; }
+    @media (min-width: 601px) and (max-width: 991px) { @content; content: '601-991'; }
   } @else if $size == 600 {
-    @media (max-width: 600px) { @content; }
+    @media (max-width: 600px) { @content; content: '600 > '; }
   }@else if $size == 500 {
-    @media (max-width: 500px) { @content; }
+    @media (max-width: 500px) { @content; content: '500 > '; }
   }@else if $size == 450 {
-    @media (max-width: 450px) { @content; }
+    @media (max-width: 450px) { @content; content: '450 > '; }
   }@else if $size == 400 {
-    @media (max-width: 400px) { @content; }
+    @media (max-width: 400px) { @content; content: '400 > '; }
   }@else if $size == 350 {
-    @media (max-width: 350px) { @content; }
+    @media (max-width: 350px) { @content; content: '350 > '; }
   }
 }
 
-//  @include wid(1200)      {   } 
-//  @include wid(992-1199)  {   } 
-//  @include wid(601-991)   {   } 
-//  @include wid(600)       {   } 
 
 // ------------------------------------
 
@@ -59,14 +95,7 @@ https://nodejs.org/download/release/v14.16.0/
 ```
 
 ``` scss
-
 @include wid(992)      {  }
-@include wid(601-991)  {  }
-@include wid(600)      {  }
-
-@include wid(1500)     {  }
-@include wid(1200-1499){  }
-@include wid(992-1199) {  }
 @include wid(601-991)  {  }
 @include wid(600)      {  }
 
@@ -178,33 +207,3 @@ form(method='POST', action='javascript:void(null);')
   button.blue(type='submit', name='send') SEND
   
 ```
-
-
-
-##### Copyright (c) 2022
-
-
-https://devhints.io/
-
-#### Configuration Webpack
-
-* compress css not url in file ``build/webpack.base.conf.js``  -  `` options: { sourceMap: true  /* , url: false  */ } ``
-
-#### Full bind - the main
-
-* css / sass / scss / less - loader
-* autoprefixer
-* min-css
-* cssnano
-* pug-loader | [Open link](https://pughtml.com) converter
-* html-loader
-* image-webpack-loader - optimizes your images / png,jpg,webp,svg
-* font mixin 
-
-#### Plugins
-* Slick-carousel  [Open link](https://github.com/kenwheeler/slick/)
-* Fancybox [Open link](https://github.com/fancyapps/fancybox)
-* Ionic Framework [Open link](https://ionicons.com/v2/)
-* Flickity [Open link](https://flickity.metafizzy.co/)
-* Pixel perfect my js
-* Forms validator input my js
