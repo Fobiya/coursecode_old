@@ -8,7 +8,7 @@ https://nodejs.org/download/release/v14.16.0/
 *  ``npm uninstall node-sass --save-dev``
 *  ``port: 9007``
 
-##### Copyright (c) 2022
+##### Copyright (c) 2023
 
 
 https://devhints.io/
@@ -27,6 +27,13 @@ https://devhints.io/
 * html-loader
 * image-webpack-loader - optimizes your images / png,jpg,webp,svg
 * font mixin 
+
+#### I need link
+* New favicon - [Open link](https://favicon.io/favicon-converter/)
+* New logo - [Open link](https://logo.com/)
+* font converter - [Open link](https://www.fontconverter.io/)
+* fonts.google - [Open link](https://fonts.google.com/)
+* iloveimg - [Open link](https://www.iloveimg.com/)
 
 #### Plugins
 * Splide is a lightweight/Splide is a lightweight [Open link](https://splidejs.com/)
@@ -48,15 +55,22 @@ https://devhints.io/
 #### MEDIA
 ``` scss
 @mixin wid($size) {
-   @if $size == 1500 {
-    @media (min-width: 1500px) { @content; 
-     content: '1500px > ';  }
+   @if $size == 1800 {
+    @media (min-width: 1800px) { @content; content: '1800px > ';  }
+  } @else if $size == 1500-1799 {
+    @media (min-width: 1500px) and (max-width: 1799px) { @content;  content: '1500-1799'; }
+  } @else if $size == 1500 {
+    @media (min-width: 1500px) { @content; content: '1500px > ';  }
   } @else if $size == 1200-1499 {
     @media (min-width: 1200px) and (max-width: 1499px) { @content;  content: '1200-1499'; }
   } @else if $size == 1200 {
     @media (min-width: 1200px) { @content;  content: '1200 > ';  }
   } @else if $size == 992-1199 {
     @media (min-width: 992px) and (max-width: 1199px) { @content; content: '992-1199'; }
+  } @else if $size == 1401 {
+    @media (min-width: 1401px) { @content; content: '1401 > ';  }
+  } @else if $size == 1301 {
+    @media (min-width: 1301px) { @content; content: '1301 > ';  }
   } @else if $size == 992-1300 {
     @media (min-width: 992px) and (max-width: 1130px) { @content; content: '992-1300';  }
   } @else if $size == 992{
@@ -65,8 +79,10 @@ https://devhints.io/
     @media (max-width: 991px) { @content; content: '991 < '; }
   } @else if $size == 601-991 {
     @media (min-width: 601px) and (max-width: 991px) { @content; content: '601-991'; }
+  } @else if $size == 601 {
+    @media (min-width: 601px) { @content; content: '600 > '; }
   } @else if $size == 600 {
-    @media (max-width: 600px) { @content; content: '600 > '; }
+    @media (max-width: 600px) { @content; content: '600 < '; }
   }@else if $size == 500 {
     @media (max-width: 500px) { @content; content: '500 > '; }
   }@else if $size == 450 {
@@ -78,8 +94,20 @@ https://devhints.io/
   }
 }
 
+//  -- Big Combo --
 
-// ------------------------------------
+//  @include wid(1500)     {   }
+//  @include wid(1200-1499){   }
+//  @include wid(992-1199) {   }
+//  @include wid(601-991)  {   }
+//  @include wid(600)      {   }
+
+//  @include wid(1200)     {   } 
+//  @include wid(992-1199) {   } 
+//  @include wid(601-991)  {   } 
+//  @include wid(600)      {   } 
+
+//  -----------------------------------
 
 //  @include wid(1500) {   }  >
 //  @include wid(1200) {   }  >
@@ -87,14 +115,38 @@ https://devhints.io/
 //  @include wid(991)  {   }  <
 //  @include wid(600)  {   }  <
 
+//  -- MOBILE --
 
 //  @include wid(500)  {   }  <
 //  @include wid(450)  {   }  <
 //  @include wid(400)  {   }  <
 //  @include wid(350)  {   }  <
+
+//  -- Last Loyaut --
+
+//  @include wid(601)  {   }  >
+//  @include wid(992-1300)  {   }  
+//  @include wid(1200-1499)  {   }  
+//  @include wid(1301)  {   } >
+//  @include wid(1401)  {   } >
+//  @include wid(1500-1799)  {   } 
+//  @include wid(1800)  {   } >
 ```
 
 ``` scss
+
+@include wid(1500)     {   }
+@include wid(1200-1499){   }
+@include wid(992-1199) {   }
+@include wid(601-991)  {   }
+@include wid(600)      {   }
+
+@include wid(1200)     {   } 
+@include wid(992-1199) {   } 
+@include wid(601-991)  {   } 
+@include wid(600)      {   } 
+
+
 @include wid(992)      {  }
 @include wid(601-991)  {  }
 @include wid(600)      {  }
@@ -110,7 +162,7 @@ https://devhints.io/
 ```
 
 
-### BEFORE AFTER
+### BEFORE-AFTER
 ``` scss
   %bef-aft{
     content: '';
@@ -133,6 +185,15 @@ https://devhints.io/
     margin-left: 14px;
   }
 
+
+
+  %flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+//    @extend %flex;
 
 ```
 
@@ -168,7 +229,7 @@ section.name__1.section__
       .col.m12.s12.l12.xl12
 ```
 
-#### Link and Script
+#### Link-and-Script
 ```
 a(href='javascript:;') 
 

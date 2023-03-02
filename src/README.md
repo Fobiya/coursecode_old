@@ -19,21 +19,28 @@ https://nodejs.org/download/release/v14.16.0/
 *  ``npm uninstall node-sass --save-dev``
 *  ``port: 9007``
 
-##### Copyright (c) 2022
+##### Copyright (c) 2023
 
 
 #### MEDIA
 ``` scss
 @mixin wid($size) {
-   @if $size == 1500 {
-    @media (min-width: 1500px) { @content; 
-     content: '1500px > ';  }
+   @if $size == 1800 {
+    @media (min-width: 1800px) { @content; content: '1800px > ';  }
+  } @else if $size == 1500-1799 {
+    @media (min-width: 1500px) and (max-width: 1799px) { @content;  content: '1500-1799'; }
+  } @else if $size == 1500 {
+    @media (min-width: 1500px) { @content; content: '1500px > ';  }
   } @else if $size == 1200-1499 {
     @media (min-width: 1200px) and (max-width: 1499px) { @content;  content: '1200-1499'; }
   } @else if $size == 1200 {
     @media (min-width: 1200px) { @content;  content: '1200 > ';  }
   } @else if $size == 992-1199 {
     @media (min-width: 992px) and (max-width: 1199px) { @content; content: '992-1199'; }
+  } @else if $size == 1401 {
+    @media (min-width: 1401px) { @content; content: '1401 > ';  }
+  } @else if $size == 1301 {
+    @media (min-width: 1301px) { @content; content: '1301 > ';  }
   } @else if $size == 992-1300 {
     @media (min-width: 992px) and (max-width: 1130px) { @content; content: '992-1300';  }
   } @else if $size == 992{
@@ -42,8 +49,10 @@ https://nodejs.org/download/release/v14.16.0/
     @media (max-width: 991px) { @content; content: '991 < '; }
   } @else if $size == 601-991 {
     @media (min-width: 601px) and (max-width: 991px) { @content; content: '601-991'; }
+  } @else if $size == 601 {
+    @media (min-width: 601px) { @content; content: '600 > '; }
   } @else if $size == 600 {
-    @media (max-width: 600px) { @content; content: '600 > '; }
+    @media (max-width: 600px) { @content; content: '600 < '; }
   }@else if $size == 500 {
     @media (max-width: 500px) { @content; content: '500 > '; }
   }@else if $size == 450 {
@@ -55,8 +64,20 @@ https://nodejs.org/download/release/v14.16.0/
   }
 }
 
+//  -- Big Combo --
 
-// ------------------------------------
+//  @include wid(1500)     {   }
+//  @include wid(1200-1499){   }
+//  @include wid(992-1199) {   }
+//  @include wid(601-991)  {   }
+//  @include wid(600)      {   }
+
+//  @include wid(1200)     {   } 
+//  @include wid(992-1199) {   } 
+//  @include wid(601-991)  {   } 
+//  @include wid(600)      {   } 
+
+//  -----------------------------------
 
 //  @include wid(1500) {   }  >
 //  @include wid(1200) {   }  >
@@ -64,14 +85,38 @@ https://nodejs.org/download/release/v14.16.0/
 //  @include wid(991)  {   }  <
 //  @include wid(600)  {   }  <
 
+//  -- MOBILE --
 
 //  @include wid(500)  {   }  <
 //  @include wid(450)  {   }  <
 //  @include wid(400)  {   }  <
 //  @include wid(350)  {   }  <
+
+//  -- Last Loyaut --
+
+//  @include wid(601)  {   }  >
+//  @include wid(992-1300)  {   }  
+//  @include wid(1200-1499)  {   }  
+//  @include wid(1301)  {   } >
+//  @include wid(1401)  {   } >
+//  @include wid(1500-1799)  {   } 
+//  @include wid(1800)  {   } >
 ```
 
 ``` scss
+
+@include wid(1500)     {   }
+@include wid(1200-1499){   }
+@include wid(992-1199) {   }
+@include wid(601-991)  {   }
+@include wid(600)      {   }
+
+@include wid(1200)     {   } 
+@include wid(992-1199) {   } 
+@include wid(601-991)  {   } 
+@include wid(600)      {   } 
+
+
 @include wid(992)      {  }
 @include wid(601-991)  {  }
 @include wid(600)      {  }
@@ -104,12 +149,20 @@ https://nodejs.org/download/release/v14.16.0/
     @extend %bef-aft;
 
     background: url(../img/logo.svg) no-repeat;
-
     width: 37px;
     height: 37px;
     margin-left: 14px;
   }
 
+
+
+  %flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+//    @extend %flex;
 
 ```
 

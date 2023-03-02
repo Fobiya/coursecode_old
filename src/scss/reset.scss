@@ -62,11 +62,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; text-align: left; }
 
 
-
-
-
-
-
 /*  not reset */
 
 
@@ -148,8 +143,8 @@ ul,li {
 
 ul,ol{
     li:last-child{
-//        padding-bottom: 0 !important;
-//        margin-bottom: 0 !important; 
+        padding-bottom: 0;
+        margin-bottom: 0; 
     }
 }
 
@@ -239,5 +234,3 @@ input:focus,
 textarea:focus {
     outline: 0;
 }
-
-

@@ -3,7 +3,7 @@ doctype
 html(lang='en')
   head
     
-    - var title = "Coursecode"
+    - var title = "Coursecode Fobiya Author"
     - var keywords = "Keywords var keywords"
     - var description = "Description var description"
     title= title
@@ -11,10 +11,12 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
 
-    link(rel='icon', type='static/ico', href='static/favicon.ico?v=13')
+    link(rel='icon', href='static/favicon.ico')
+    link(rel='icon', href='static/favicon.ico', type='image/svg+xml')
+    
 
     meta(property='og:url', content='https:')
-    meta(property='og:image', content='img/logo.png?v=1.3')
+    meta(property='og:image', content='img/logo-black.svg?v=1.3')
     meta(property='og:image:width', content='300')
     meta(property='og:image:height', content='300')
 
@@ -26,7 +28,7 @@ html(lang='en')
     meta(name='keywords'  conten= '' + keywords + '' )
     script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
 
-  body.info(data-img='img/1.png')
+  body.info(data-img='img/1-.png')
 
     .bar-long
     
@@ -37,7 +39,7 @@ html(lang='en')
     .right__menu
       .bock__top
         a.close(href='javascript:;')
-          img.logo__img(src='img/close.svg', alt='logo_black')
+          img.logo__img(src='img/logo-no-background.svg', alt='logo_black')
       ul.menu__
         li
           a(href='javascript:;') Recently Added
@@ -58,38 +60,39 @@ html(lang='en')
         .row
           .col.m12.s12.l12.xl12
             a.logo(href='javascript:;')
-              img.logo__img(src='img/logo.svg', alt='logo_black')
+              img.logo__img(src='img/logo-no-background.svg', alt='logo_black')
  
 
           
     section#sec-1.section__1
-      video#video_1( playsinline='', autoplay='', muted='', loop='', preload='none')
-        source(src='video/background.mp4', type='video/mp4')
+      // muted='',
+      video#video_1( playsinline='', autoplay='', loop='', preload='none', controls='controls')
+        source(src='video/richard_mattka_-_show_reel_-_2019-1080p.mp4', type='video/mp4')
       .container
         .row
           .col.m12.s12.l12.xl12
-            img(src='img/logo.png', alt='logo_black')
+            img(src='img/logo-no-background.svg', alt='logo_black')
           
     section#sec-2.section__2
       .container
         .row
           .col.m12.s12.l12.xl12
             h2 @splidejs/splide
-            #post__slid.splide
+            .coffee.splide
               .splide__track
                 ul.splide__list
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
                   li.splide__slide
-                    img(src='img/logo.svg', alt='logo_brand_1')
+                    img(src='img/logo-no-background.svg', alt='logo_brand_1')
 
             .logo_before
           
@@ -99,7 +102,7 @@ html(lang='en')
           .col.m12.s12.l12.xl12
             h2 section__3
             .logo_svg
-            img.lazy__(data-src='img/logo.svg', alt='logo_brand_1')
+            img.lazy__(data-src='img/logo-no-background.svg', alt='logo_brand_1')
     section#sec-4.section__4
       .container
         .row

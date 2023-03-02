@@ -3,6 +3,17 @@ define(["jquery"], function($) {
 // ===========================================================  
 
   
+      $('.see-detail_open').click(function() {
+        
+          $('body').addClass("open__menu");
+
+          var num_data = $(this).data('info');
+
+          $('.careers__menu').removeClass('open');
+          $('#infor_'+ num_data).addClass('open');
+
+      });  
+  
   
 
   $('.menu__open').click(function(){
@@ -10,8 +21,7 @@ define(["jquery"], function($) {
     $(this).toggleClass('open');
     $(this).parent().toggleClass('back');
     $('.system_user>.select').toggleClass('active');
-    
-     
+
   });
 
 
@@ -194,62 +204,64 @@ define(["jquery"], function($) {
   
   
   
-  class cssClassTogglerScroll{
-  constructor(data){
-    this.options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: data.threshold
-    };
-
-    this.observer = new IntersectionObserver((entries, observer)=>{
-      entries.forEach((entry) => {
-      if(entry.isIntersecting){
-        if(data.cssClass){
-          entry.target.classList.add(data.cssClass);
-        }
-        if(data.onVisible){
-          data.onVisible();
-        }
-      }
-      else{
-        if(data.cssClass){
-          entry.target.classList.remove(data.cssClass);
-        }
-        if(data.onHidden){
-          data.onHidden();
-        }
-      }
-    });
-
-  }, this.options);
-    this.observer.observe(data.element);
-
-  }
-}
-
-for(let div of document.querySelectorAll('footer')){
-
-  new cssClassTogglerScroll({
-    element: div,
-    cssClass: 'act__',
-    threshold: 0.1,
-    onVisible: () => {
-
-    },
-    onHidden: () => {
-//      console.log('section__products active');
-    }
-  });
-
-}
+//  class cssClassTogglerScroll{
+//    constructor(data){
+//      this.options = {
+//        root: null,
+//        rootMargin: "50px",
+//        threshold: data.threshold
+//      };
+//
+//      this.observer = new IntersectionObserver((entries, observer)=>{
+//        entries.forEach((entry) => {
+//        if(entry.isIntersecting){
+//          if(data.cssClass){
+//            entry.target.classList.add(data.cssClass);
+//          }
+//          if(data.onVisible){
+//            data.onVisible();
+//          }
+//        }
+//        else{
+//          if(data.cssClass){
+//            entry.target.classList.remove(data.cssClass);
+//          }
+//          if(data.onHidden){
+//            data.onHidden();
+//          }
+//        }
+//      });
+//
+//    }, this.options);
+//      this.observer.observe(data.element);
+//
+//    }
+//  }
+//
+//for(let div of document.querySelectorAll('footer')){
+//
+//  new cssClassTogglerScroll({
+//    element: div,
+//    cssClass: 'act__',
+//    threshold: 0.1,
+//    onVisible: () => {
+//
+//    },
+//    onHidden: () => {
+////      console.log('section__products active');
+//    }
+//  });
+//
+//}
   
   
 // =========================================================== 
 // END cssClassTogglerScroll
 // =========================================================== 
   
-
+// =========================================================== 
+// responsiveVoice
+// =========================================================== 
 
 //    responsiveVoice.cancel();
 //   responsiveVoice.speak($('h1').val());
@@ -271,16 +283,16 @@ for(let div of document.querySelectorAll('footer')){
 //    .catch(err => { console.error("Error:" + err); return null; });
 //}
   
-// ===========================================================
-// SCROLL
-// ===========================================================
+  // =========================================================== 
+// END responsiveVoice
+// =========================================================== 
+
   
 // ===========================================================
-// SCROLL
+// SCROLL TOP
 // ===========================================================
   
-  
-  
+
 
 
 //  var height = $(window).scrollTop();
@@ -301,7 +313,7 @@ for(let div of document.querySelectorAll('footer')){
 
 
 // ===========================================================
-// END SCROLL
+// END SCROLL TOP
 // ===========================================================
   
 // ===========================================================
@@ -603,64 +615,63 @@ for(let div of document.querySelectorAll('footer')){
 	
 
   
-//  
-//class cssClassTogglerScroll{
-//  constructor(data){
-//    this.options = {
-//      root: null,
-//      rootMargin: "0px",
-//      threshold: data.threshold
-//    };
-//
-//    this.observer = new IntersectionObserver((entries, observer)=>{
-//      entries.forEach((entry) => {
-//      if(entry.isIntersecting){
-//        if(data.cssClass){
-//          entry.target.classList.add(data.cssClass);
-//        }
-//        if(data.onVisible){
-//          data.onVisible();
-//        }
-//      }
-//      else{
-//        if(data.cssClass){
-//          entry.target.classList.remove(data.cssClass);
-//        }
-//        if(data.onHidden){
-//          data.onHidden();
-//        }
-//      }
-//    });
-//
-//  }, this.options);
-//    this.observer.observe(data.element);
-//
-//  }
-//}
-//
-//
-//
-//for(let div of document.querySelectorAll('section')){
-//
-//  new cssClassTogglerScroll({
-//    element: div,
-//    cssClass: 'active',
-//    threshold: 0.1,
-//    onVisible: () => {
-//
-//    },
-//    onHidden: () => {
-////      console.log('section__products active');
-//    }
-//  });
-//}
-//    
+  
+class cssClassTogglerScroll{
+  constructor(data){
+    this.options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: data.threshold
+    };
+
+    this.observer = new IntersectionObserver((entries, observer)=>{
+      entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        if(data.cssClass){
+          entry.target.classList.add(data.cssClass);
+        }
+        if(data.onVisible){
+          data.onVisible();
+        }
+      }
+      else{
+        if(data.cssClass){
+          entry.target.classList.remove(data.cssClass);
+        }
+        if(data.onHidden){
+          data.onHidden();
+        }
+      }
+    });
+
+  }, this.options);
+    this.observer.observe(data.element);
+
+  }
+}
+
+
+
+for(let div of document.querySelectorAll('section')){
+
+  new cssClassTogglerScroll({
+    element: div,
+    cssClass: 'descry',
+    threshold: 0.1,
+    onVisible: () => {
+
+    },
+    onHidden: () => {
+//      console.log('section__products active');
+    }
+  });
+}
+    
 
   
 // =========================================================== 
 // Fancybox
 // =========================================================== 
-
 
     //$("#open-policy").on('click', function() {
     //  
@@ -680,8 +691,6 @@ for(let div of document.querySelectorAll('footer')){
     //  
     //});
 
-
-    
 // =========================================================== 
 // END Fancybox
 // ===========================================================    
@@ -892,7 +901,7 @@ for(let div of document.querySelectorAll('footer')){
   
   
   
-// ================================================================================================================================================================= 
+// ==========================================================================================================
 
 //  $(".flat.section__3 .box__link").click(function(e){
 //    e.preventDefault();
@@ -903,21 +912,12 @@ for(let div of document.querySelectorAll('footer')){
 //        $(this).toggleClass('open');
 //  });
   
-// ================================================================================================================================================================= 
-  
+// ==========================================================================================================
   
   
 //    $(function () {
 //          $('[class*="phone"]').mask("+38(099) 999-99-99");
 //    });
-  
-  
-    $("#test").on('click', function() {
-
-      $.fancybox.open('<div class="titlebox"><h2 class="title tc">Политика конфиденциальности</h2></div><div class="md_content tl"><p>Ваша конфиденциальность очень важна для нас. Мы хотим, чтобы Ваша работа в Интернет по возможности была максимально приятной и полезной, и Вы совершенно спокойно использовали широчайший спектр информации, инструментов и возможностей, которые предлагает Интернет.</p><p>Личная информация Членов, собранная при регистрации (или в любое другое время) преимущественно используется для подготовки Продуктов или Услуг в соответствии с Вашими потребностями. Ваша информация не будет передана или продана третьим сторонам. Однако мы можем частично раскрывать личную информацию в особых случаях, описанных в «Согласии с рассылкой»</p><p><strong>Какие данные собираются на сайте</strong></p><p>При добровольной регистрации на получение рассылки вы отправляете свое Имя и E-mail через форму регистрации.</p><p><strong>С какой целью собираются эти данные</strong></p><p>Имя используется для обращения лично к вам, а ваш e-mail для отправки вам писем рассылок, новостей, полезных материалов, коммерческих предложений.</p><p>Ваши имя и e-mail не передаются третьим лицам, ни при каких условиях кроме случаев, связанных с исполнением требований законодательства.</p><p>Вы можете отказаться от получения писем рассылки и удалить из базы данных свои контактные данные в любой момент, кликнув на ссылку для отписки, присутствующую в каждом письме.</p><p><strong>Как эти данные используются</strong></p><p>При помощи этих данных собирается информация о действиях посетителей на сайте с целью улучшения его содержания, улучшения функциональных возможностей сайта и, как следствие, создания качественного контента и сервисов для посетителей.</p><p>Вы можете в любой момент изменить настройки своего браузера так, чтобы браузер блокировал все файлы или оповещал об отправке этих файлов. Учтите при этом, что некоторые функции и сервисы не смогут работать должным образом.</p> <p><strong>Как эти данные защищаются</strong></p><p>Для защиты Вашей личной информации мы используем разнообразные административные, управленческие и технические меры безопасности. Наша Компания придерживается различных международных стандартов контроля, направленных на операции с личной информацией, которые включают определенные меры контроля по защите информации, собранной в Интернет.</p><p>Наших сотрудников обучают понимать и выполнять эти меры контроля, они ознакомлены с нашим Уведомлением о конфиденциальности, нормами и инструкциями.</p><p>Тем не менее, несмотря на то, что мы стремимся обезопасить Вашу личную информацию, Вы тоже должны принимать меры, чтобы защитить ее.</p><p>Мы настоятельно рекомендуем Вам принимать все возможные меры предосторожности во время пребывания в Интернете. Организованные нами услуги и веб-сайты предусматривают меры по защите от утечки, несанкционированного использования и изменения информации, которую мы контролируем. Несмотря на то, что мы делаем все возможное, чтобы обеспечить целостность и безопасность своей сети и систем, мы не можем гарантировать, что наши меры безопасности предотвратят незаконный доступ к этой информации хакеров сторонних организаций.</p><p>В случае изменения данной политики конфиденциальности вы сможете прочитать об этих изменениях на этой странице или, в особых случаях, получить уведомление на свой e-mail.</p></div>');
-
-  });
-  
   
 
 });

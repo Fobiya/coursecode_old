@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'goback-bellota-bold';
+  src: url(./goback-bellota-bold.eot);
+  src: url(./goback-bellota-bold.eot?#iefix) format('embedded-opentype'),
+       url(./goback-bellota-bold.otf) format('otf'),
+       url(./goback-bellota-bold.svg#goback-bellota-bold) format('svg'),
+       url(./goback-bellota-bold.ttf) format('truetype'),
+       url(./goback-bellota-bold.woff) format('woff'),
+       url(./goback-bellota-bold.woff2) format('woff2');
+}

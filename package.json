@@ -87,6 +87,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "jquery": "^3.6.1"
   }
 }

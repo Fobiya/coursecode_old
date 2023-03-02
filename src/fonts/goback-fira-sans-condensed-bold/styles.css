@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'goback-fira-sans-condensed-bold';
+  src: url(./goback-fira-sans-condensed-bold.eot);
+  src: url(./goback-fira-sans-condensed-bold.eot?#iefix) format('embedded-opentype'),
+       url(./goback-fira-sans-condensed-bold.otf) format('otf'),
+       url(./goback-fira-sans-condensed-bold.svg#goback-fira-sans-condensed-bold) format('svg'),
+       url(./goback-fira-sans-condensed-bold.ttf) format('truetype'),
+       url(./goback-fira-sans-condensed-bold.woff) format('woff'),
+       url(./goback-fira-sans-condensed-bold.woff2) format('woff2');
+}

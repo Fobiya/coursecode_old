@@ -38,6 +38,10 @@ body,html {
   content: 'Autor: Fobiya';
 }
 
+a,[type="submit"],button{
+  cursor: pointer !important;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -87,8 +91,8 @@ audio,
 canvas,
 video {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
+//    display: inline;
+//    zoom: 1;
     max-width: 100%;
 }
 
@@ -149,7 +153,7 @@ main {
    */
 
 figure {
-    margin: 1em 40px;
+//    margin: 1em 40px;
 }
 
 
@@ -433,7 +437,7 @@ button:-moz-focusring,
    */
 
 fieldset {
-    padding: 0.35em 0.75em 0.625em;
+//    padding: 0.35em 0.75em 0.625em;
 }
 
 
@@ -812,8 +816,8 @@ input[type=range] {
 /* This is needed for some mobile phones to display the Google Icon font properly */
 
 .container {
-    margin: 0 auto;
-      max-width: 1310px;
+  margin: 0 auto;
+  max-width: 1356px;
   z-index: 2;
   position: relative;
 }

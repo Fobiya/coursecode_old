@@ -5,8 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 //const { VueLoaderPlugin } = require('vue-loader')
 
-
-
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -190,11 +188,9 @@ module.exports = {
   plugins: [
 //    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-        
- 
+
     filename: `${PATHS.assets}css/min.css?v=[hash]`,
-   
-        
+
     publicPath: '../'
     }),
 //    new MiniCssExtractPlugin({
@@ -209,37 +205,12 @@ module.exports = {
     
     }),    
 
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/home.pug`,
-//      filename: './home.html'
-//    }),
-//       
-//
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/paid.pug`,
-//      filename: './paid.html'
-//    }),
-//
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/stai.pug`,
-//      filename: './stai.html'
-//    }),
-//
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/page.pug`,
-//      filename: './page.html'
-//    }),
-    
-    
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/500.html`,
-//      filename: './500.html'
-//    }),
+//   new HtmlWebpackPlugin({
+//     hash: false,
+//     template: `${PATHS.src}/404.pug`,
+//     filename: './404.html'
+//   }),
+
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
